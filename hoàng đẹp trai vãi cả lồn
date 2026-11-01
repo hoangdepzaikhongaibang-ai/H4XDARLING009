@@ -592,6 +592,7 @@ local buildOk, buildErr = xpcall(function()
                 {"Zeroin Hub", "https://zeroinhub.com/api/script"},
                 {"Vezyx Hub", "https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-viet-hoa-v6-vip-pro98"},
                 {"Chili Hub v8", "https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-v8-finder-free-9836"},
+                {"Sena Hub', "https://raw.githubusercontent.com/senarblx/sena/refs/heads/main/loaderv2sena"},
             },
         },
         {
