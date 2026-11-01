@@ -1,4 +1,1144 @@
-local v0={Enum.KeyCode.LeftControl};local v1=true;local v2=false;do local v227=0;local v228;while true do if (v227==(0 -0)) then v228={};pcall(function() if gethui then table.insert(v228,gethui());end end);v227=1 -0 ;end if (v227==1) then pcall(function() table.insert(v228,game:GetService("CoreGui"));end);pcall(function() local v481=0 + 0 ;local v482;while true do if (v481==(0 + 0)) then v482=game:GetService("Players").LocalPlayer:FindFirstChildOfClass("PlayerGui");if v482 then table.insert(v228,v482);end break;end end end);v227=2 + 0 ;end if (v227==(1 + 1)) then for v483,v484 in ipairs(v228) do local v485=0 + 0 ;while true do if (1==v485) then pcall(function() local v572=0;local v573;while true do if (v572==(0 -0)) then v573=v484:FindFirstChild("H4XDARLING009_PerfHud",true);if v573 then v573:Destroy();end break;end end end);pcall(function() for v583,v584 in ipairs(v484:GetChildren()) do if (v584:IsA("ScreenGui") and (v584.Name=="WindUI")) then v584:Destroy();end end end);break;end if (v485==0) then pcall(function() local v574=0;local v575;while true do if (v574==(0 -0)) then v575=v484:FindFirstChild("H4XDARLING009_CodeViewer",true);if v575 then v575:Destroy();end break;end end end);pcall(function() local v576=v484:FindFirstChild("H4XDARLING009_Pill",true);if v576 then v576:Destroy();end end);v485=1;end end end break;end end end local function v3(v229,v230,v231) task.spawn(function() local v318=0 -0 ;local v319;while true do if (v318==(1 + 0)) then if  not v319 then warn("[H4X Hub] "   .. tostring(v229)   .. " | "   .. tostring(v230) );end break;end if ((0 -0)==v318) then v319=false;for v522=754 -(239 + 514) ,3 + 3  do v319=pcall(function() game:GetService("StarterGui"):SetCore("SendNotification",{Title=v229,Text=v230,Duration=v231 or (1334 -(797 + 532)) });end);if v319 then break;end task.wait(1);end v318=1;end end end);end if ((type(loadstring)~="function") and (type(load)~="function")) then local v320=0 + 0 ;while true do if (v320==(0 + 0)) then v3("Hub Lỗi","Executor này chặn loadstring -> ko chạy hub được. Đổi executor khác (hoặc bật chế độ Luau exploit).",27 -15 );return;end end end local v4=((type(loadstring)=="function") and loadstring) or load ;local v5={"https://github.com/Footagesus/WindUI/releases/latest/download/main.lua","https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua","https://cdn.jsdelivr.net/gh/Footagesus/WindUI@main/dist/main.lua"};local v6=false;local v7=nil;local v8="khong thu duoc link nao";for v232,v233 in ipairs(v5) do local v234,v235=pcall(function() local v321=731 -(476 + 255) ;local v322;local v323;local v324;local v325;while true do if (v321==2) then if  not v323 then error("loi dong code: "   .. tostring(v324) );end v325=v323();v321=1133 -(369 + 761) ;end if (1==v321) then if ( #v322<(1157 + 843)) then error("bai tai ve qua ngan ("   ..  #v322   .. " ky tu), co the la trang loi" );end v323,v324=v4(v322);v321=2 -0 ;end if (0==v321) then v322=game:HttpGet(v233,true);if (type(v322)~="string") then error("HttpGet tra ve "   .. type(v322) );end v321=1 -0 ;end if (v321==(241 -(64 + 174))) then if (type(v325)~="table") then error("WindUI khong tra ve table ("   .. type(v325)   .. ")" );end return v325;end end end);if (v234 and (type(v235)=="table")) then v6=true;v7=v235;break;end v8=tostring(v235);warn("[H4X Hub] WindUI link loi: "   .. v233   .. " | "   .. v8 );end if ( not v6 or (type(v7)~="table")) then local v326=0 + 0 ;while true do if (v326==(0 -0)) then v3("Hub Lỗi","Ko tải được WindUI (ca 3 link). Lỗi: "   .. v8:sub(337 -(144 + 192) ,336 -(42 + 174) )   .. " | Check lại mạng/RAM hoặc executor có cho HttpGet không." ,10 + 2 );return;end end end local v9=game:GetService("Players");local v10=v9.LocalPlayer;pcall(function() v7:AddTheme({Name="PinkH4X",Accent=Color3.fromRGB(212 + 43 ,105,77 + 103 ),Dialog=Color3.fromRGB(1544 -(363 + 1141) ,15,28),Outline=Color3.fromRGB(255,255,1835 -(1183 + 397) ),Text=Color3.fromRGB(776 -521 ,187 + 68 ,191 + 64 ),Placeholder=Color3.fromRGB(2185 -(1913 + 62) ,108 + 62 ,190),Background=Color3.fromRGB(42 -26 ,16,1949 -(565 + 1368) ),Button=Color3.fromRGB(876 -643 ,1756 -(1477 + 184) ,157 -41 ),Icon=Color3.fromRGB(238 + 17 ,961 -(564 + 292) ,310 -130 ),Toggle=Color3.fromRGB(153 -102 ,199,393 -(244 + 60) ),Slider=Color3.fromRGB(255,81 + 24 ,180),Checkbox=Color3.fromRGB(255,105,656 -(41 + 435) ),PanelBackground=Color3.fromRGB(1256 -(938 + 63) ,255,197 + 58 ),PanelBackgroundTransparency=1125.95 -(936 + 189) ,SliderIcon=Color3.fromRGB(84 + 171 ,1718 -(1565 + 48) ,112 + 68 ),Primary=Color3.fromRGB(1393 -(782 + 356) ,105,447 -(176 + 91) ),LabelBackground=Color3.fromRGB(0,0 -0 ,0 -0 ),LabelBackgroundTransparency=1092.83 -(975 + 117) ,ElementBackground=Color3.fromRGB(45,30,1915 -(157 + 1718) ),ElementBackgroundTransparency=0});end);local v11=Color3.fromRGB(207 + 48 ,105,638 -458 );local v12=Color3.fromRGB(871 -616 ,255,1273 -(697 + 321) );local v13=Color3.fromRGB(60,163 -103 ,127 -67 );local v14=Color3.fromRGB(69 -39 ,12 + 18 ,67 -31 );local v15=Color3.fromRGB(22,58 -36 ,1254 -(322 + 905) );local v16=Instance.new("ScreenGui");v16.Name="H4XDARLING009_CodeViewer";v16.ResetOnSpawn=false;v16.DisplayOrder=1000611 -(602 + 9) ;v16.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;do local v236=1189 -(449 + 740) ;local v237;local v238;while true do if (v236==1) then v238=false;if v237 then v238=pcall(function() v16.Parent=v237;end);end v236=874 -(826 + 46) ;end if (v236==0) then local v444=947 -(245 + 702) ;while true do if ((0 -0)==v444) then v237=nil;pcall(function() if gethui then v237=gethui();else v237=game:GetService("CoreGui");end end);v444=1 + 0 ;end if (v444==(1899 -(260 + 1638))) then v236=441 -(382 + 58) ;break;end end end if (v236==(6 -4)) then if  not v238 then v16.Parent=v10:WaitForChild("PlayerGui");end break;end end end local v22=Instance.new("Frame");v22.Name="CodeViewer";v22.Size=UDim2.new(0 + 0 ,620,0,868 -448 );v22.Position=UDim2.new(0.5 -0 , -(1515 -(902 + 303)),0.5, -210);v22.BackgroundColor3=v14;v22.BorderSizePixel=0;v22.Active=true;v22.Draggable=true;v22.Visible=false;v22.Parent=v16;local v32=Instance.new("UICorner");v32.CornerRadius=UDim.new(0 -0 ,14);v32.Parent=v22;local v35=Instance.new("UIStroke");v35.Color=v11;v35.Thickness=2;v35.Parent=v22;local v39=Instance.new("TextButton");v39.Size=UDim2.new(0,90,0 -0 ,32);v39.Position=UDim2.new(0 + 0 ,1702 -(1121 + 569) ,0,224 -(22 + 192) );v39.BackgroundColor3=v13;v39.Text="← Đóng";v39.TextColor3=v12;v39.Font=Enum.Font.SourceSansBold;v39.TextSize=697 -(483 + 200) ;v39.Parent=v22;local v49=Instance.new("UICorner");v49.CornerRadius=UDim.new(0,1469 -(1404 + 59) );v49.Parent=v39;local v52=Instance.new("TextLabel");v52.Size=UDim2.new(1, -(629 -399),0 -0 ,32);v52.Position=UDim2.new(765 -(468 + 297) ,112,562 -(334 + 228) ,33 -23 );v52.BackgroundTransparency=1;v52.Text="📜 Script";v52.TextColor3=v12;v52.Font=Enum.Font.SourceSansBold;v52.TextSize=36 -20 ;v52.TextXAlignment=Enum.TextXAlignment.Left;v52.TextTruncate=Enum.TextTruncate.AtEnd;v52.Parent=v22;local v65=Instance.new("TextButton");v65.Size=UDim2.new(0,145 -65 ,0 + 0 ,268 -(141 + 95) );v65.Position=UDim2.new(1 + 0 , -(468 -286),0,10);v65.BackgroundColor3=Color3.fromRGB(144 -84 ,40 + 130 ,246 -156 );v65.Text="▶ Chạy";v65.TextColor3=v12;v65.Font=Enum.Font.SourceSansBold;v65.TextSize=10 + 4 ;v65.Parent=v22;local v74=Instance.new("UICorner");v74.CornerRadius=UDim.new(0 + 0 ,8 -2 );v74.Parent=v65;local v77=Instance.new("TextButton");v77.Size=UDim2.new(0 + 0 ,243 -(92 + 71) ,0 + 0 ,53 -21 );v77.Position=UDim2.new(1, -(859 -(574 + 191)),0 + 0 ,25 -15 );v77.BackgroundColor3=v11;v77.Text="📋 Copy";v77.TextColor3=v12;v77.Font=Enum.Font.SourceSansBold;v77.TextSize=14;v77.Parent=v22;local v86=Instance.new("UICorner");v86.CornerRadius=UDim.new(0 + 0 ,855 -(254 + 595) );v86.Parent=v77;local v89=Instance.new("ScrollingFrame");v89.Size=UDim2.new(127 -(55 + 71) , -(31 -7),1791 -(573 + 1217) , -(149 -95));v89.Position=UDim2.new(0 + 0 ,18 -6 ,939 -(714 + 225) ,48);v89.BackgroundColor3=v15;v89.BorderSizePixel=0;v89.CanvasSize=UDim2.new(0 -0 ,0 -0 ,0,0 + 0 );v89.AutomaticCanvasSize=Enum.AutomaticSize.Y;v89.ScrollBarThickness=7 -1 ;v89.ScrollBarImageColor3=v11;v89.Parent=v22;local v100=Instance.new("UICorner");v100.CornerRadius=UDim.new(806 -(118 + 688) ,8);v100.Parent=v89;local v103=Instance.new("TextBox");v103.Size=UDim2.new(1, -(64 -(25 + 23)),0,0);v103.Position=UDim2.new(0 + 0 ,8,0,1892 -(927 + 959) );v103.AutomaticSize=Enum.AutomaticSize.Y;v103.BackgroundTransparency=3 -2 ;v103.Text="";v103.TextColor3=Color3.fromRGB(952 -(16 + 716) ,434 -209 ,235);v103.Font=Enum.Font.Code;v103.TextSize=13;v103.TextWrapped=false;v103.MultiLine=true;v103.TextEditable=false;v103.ClearTextOnFocus=false;v103.TextXAlignment=Enum.TextXAlignment.Left;v103.TextYAlignment=Enum.TextYAlignment.Top;v103.Parent=v89;local v121=nil;local v122=nil;local v123=nil;local v124=nil;local function v125(v239,v240,v241) local v242=97 -(11 + 86) ;while true do if (v242==(4 -2)) then v65.Visible=true;v77.Visible=true;v242=288 -(175 + 110) ;end if (v242==(9 -5)) then v22.Visible=true;task.spawn(function() local v486=0;local v487;local v488;while true do if (v486==(4 -3)) then if  not v487 then local v585=1796 -(503 + 1293) ;while true do if (v585==(0 -0)) then v52.Text="❌ "   .. v239 ;v103.Text="-- KHÔNG TẢI ĐƯỢC SCRIPT\n-- Lỗi: "   .. tostring(v488)   .. "\n-- Kiểm tra lại link hoặc executor có hỗ trợ HttpGet không." ;v585=1;end if (v585==(1 + 0)) then return;end end end v122=v488;v486=1063 -(810 + 251) ;end if (v486==0) then v487,v488=pcall(function() return game:HttpGet(v240,true);end);if (v121~=v240) then return;end v486=1 + 0 ;end if (v486==(1 + 1)) then v52.Text="📜 "   .. v239   .. "  ("   ..  #v488   .. " ký tự)" ;if ( #v488>16000) then v103.Text=v488:sub(1 + 0 ,16533 -(43 + 490) )   .. "\n\n-- ⚠️ SCRIPT QUÁ DÀI: chỉ hiện 16000 ký tự đầu."   .. "\n-- Bấm nút [📋 Copy] để lấy TOÀN BỘ code." ;else v103.Text=v488;end break;end end end);break;end if (v242==(736 -(711 + 22))) then v52.Text="⏳ "   .. v239   .. " (đang tải...)" ;v103.Text="-- Đang tải script, đợi nha...";v242=15 -11 ;end if (v242==1) then v123=v241;v124=nil;v242=861 -(240 + 619) ;end if (v242==(0 + 0)) then v121=v240;v122=nil;v242=1 -0 ;end end end local function v126(v243,v244) v121=nil;v122=nil;v123=nil;v124=v244;v65.Visible=false;v77.Visible=true;v52.Text="ℹ️ "   .. v243 ;v103.Text=v244;v22.Visible=true;end v39.MouseButton1Click:Connect(function() v22.Visible=false;end);v65.MouseButton1Click:Connect(function() local v251=0 + 0 ;local v252;while true do if (v251==0) then v252=1744 -(1344 + 400) ;while true do if (v252==0) then if  not v121 then return;end task.spawn(function() local v557=405 -(255 + 150) ;local v558;local v559;local v560;while true do if (v557==(1 + 0)) then if v123 then pcall(v123);end v559,v560=pcall(function() v4(v558)();end);v557=2;end if (v557==(0 + 0)) then local v618=0 -0 ;while true do if (v618==0) then v558=v122;if  not v558 then local v636=0 -0 ;local v637;local v638;local v639;while true do if (v636==1) then v639=nil;while true do if (v637==(1739 -(404 + 1335))) then v638,v639=pcall(function() v558=game:HttpGet(v121,true);end);if  not v638 then local v643=0;while true do if (v643==(406 -(183 + 223))) then warn("[Hub] Không tải được script: "   .. tostring(v639) );return;end end end break;end end break;end if ((0 -0)==v636) then v637=0 + 0 ;v638=nil;v636=1 + 0 ;end end end v618=1;end if (v618==(338 -(10 + 327))) then v557=1;break;end end end if (v557==(2 + 0)) then if  not v559 then warn("[Hub] Lỗi chạy script: "   .. tostring(v560) );end break;end end end);break;end end break;end end end);v77.MouseButton1Click:Connect(function() task.spawn(function() local v327=v124;if ( not v327 and v121) then v327=v122;if  not v327 then local v524=0;local v525;while true do if (v524==(338 -(118 + 220))) then v525=pcall(function() v327=game:HttpGet(v121,true);end);if  not v525 then return;end break;end end end end if  not v327 then return;end pcall(function() if setclipboard then setclipboard(v327);end end);v77.Text="✔ Đã copy";task.wait(1.2 + 0 );v77.Text="📋 Copy";end);end);local function v127() local v253=449 -(108 + 341) ;local v254;local v255;while true do if (v253==(1 + 1)) then if v255 then table.insert(v254,v255);end return v254;end if (v253==(4 -3)) then pcall(function() table.insert(v254,game:GetService("CoreGui"));end);v255=v10:FindFirstChildOfClass("PlayerGui");v253=1495 -(711 + 782) ;end if (v253==(0 -0)) then v254={};pcall(function() if gethui then table.insert(v254,gethui());end end);v253=470 -(270 + 199) ;end end end local v128=nil;local v129=nil;local v130,v131=xpcall(function() local v256=v7:CreateWindow({Title="H4XDARLING009 Hub",Icon="rbxassetid://10723345633",Author="H4XDARLING009",Folder="H4X9 Settings",Size=UDim2.fromOffset(189 + 391 ,460),Transparent=true,Theme="Dark",SideBarWidth=170,HasOutline=true,HideSearchBar= not v2});v128=v256;pcall(function() v7:SetTheme("PinkH4X");end);pcall(function() local v329=1819 -(580 + 1239) ;local v330;while true do if (v329==(0 -0)) then v330=v7:GetCurrentTheme();if (v330~="PinkH4X") then v7:SetTheme("Rose");end break;end end end);local v257=v256:Tab({Title="Trang chủ",Icon="house"});v257:Paragraph({Title="Cách dùng",Desc="Bấm tên script ở các tab bên trái, cửa sổ mới sẽ hiện TOÀN BỘ CODE bên trong script đó."   .. " Trong cửa sổ code có nút ▶ Chạy (chạy luôn script) và 📋 Copy (copy toàn bộ code)."   .. " Nút — trên cửa sổ menu để thu nhỏ thành thanh nhỏ trên cùng, bấm thanh đó để mở lại menu"   .. " (PC: thanh do hub tự vẽ, kéo được, chuột phải = tắt hub. Mobi: dùng thanh gốc của WindUI, hub ko vẽ thêm -> hết bị 2 thanh)."   .. " PHIM TAT: bam Left Ctrl mo menu, bam lan nua thu (nham luc giu Ctrl bam C/V/X thi menu tu ve lai, doi phim o dau file)."   .. " An X tat hub thi menu mat het nhung BOOST FPS + FPS van chay: 2 nut [x] [R] canh dong ho FPS duoc dung thay hub."   .. " Tab Cai may: nut Boost FPS (Remove Textures) ha QualityLevel + Plastic hoa part + an Decal/Texture,"   .. " bam [↩ Trả lại cài đặt gốc] hoac nut [R] la ve dung nhu luc dau."   .. " Ban moi nhat: phim tat chi goi Close/Open cua WindUI khi GUI con song,"   .. " va neu co loi no tu tat han phim tat -> bam Ctrl sau khi tat hub thi game VAN AN TOAN."   .. " Trang này luôn có nút Discord / TikTok và bảng giá cày thuê." });local v258=v256:Tab({Title="Tăng fps",Icon="gauge"});local v259={{title="Blox Fruit",icon="swords",buttons={{"RealKid Hub","https://raw.githubusercontent.com/realkidhub/realkid/refs/heads/main/main.lua"},{"Redz Hub","https://raw.githubusercontent.com/bloxfruitsnokey/Redz/refs/heads/main/Redz/v1.luau"},{"Teddy Hub","https://raw.githubusercontent.com/teddyhubdev/diepvy/refs/heads/main/TeddyHub.lua"},{"Quantum Onyx","https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"},{"Hermanos Hub (PVP)","https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"},{"HoHo Hub (Freemium)","https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"},{"OMG Hub","https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},{"bnn test ko use dc ",""}}},{title="Steal an Egg",icon="egg",buttons={{"Lemon Hub","https://raw.githubusercontent.com/kadit9999/stealanegg/refs/heads/main/lemonhub.lua"},{"Chilli Hub","https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},{"Ajian Hub (Luarmor)","https://api.luarmor.net/files/v4/loaders/359e97f8618e9008afe5f496184ebb7c.lua"},{"Zeroin Hub","https://zeroinhub.com/api/script"},{"Vezyx Hub","https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-viet-hoa-v6-vip-pro98"},{"Chili Hub v8","https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-v8-finder-free-9836"},{"Sena Hub","https://raw.githubusercontent.com/senarblx/sena/refs/heads/main/loaderv2sena"}}},{title="TSB",icon="swords",buttons={{"Auto farm","https://gitlab.com/zkay404-group/ProjectYielding/-/raw/main/ZKPublicFarm"},{"Jnkie API Script (TSB)","https://api.jnkie.com/api/v1/luascripts/public/52276846a0d8e73f3208d9206b7be7c8ea031f62e5707d45d0ec9abfdca35467/download"},{"Legends Battlegrounds","https://raw.githubusercontent.com/solarastuff/legendsbattlegrounds/refs/heads/main/legendary.lua"},{"Phantasm Hub (TSB)","https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Games/TSB.lua"}}},{title="evade",icon="move",buttons={{"Shader map đẹp Hub","https://raw.githubusercontent.com/zugkun/CustomShader/refs/heads/main/JoevanShaderLite.lua"},{"Yinyang Hub","https://raw.githubusercontent.com/yesimsoul/Yin-Yang-Hub/refs/heads/main/evade"},{"Moondiety Hub","https://moondiety.com/loader"},{"Ivory Hub","https://jnkie.com/loaders/ivory"},{"Rift Hub","https://riftscripts.up.railway.app/api/v1/loader/hlwn-evade"},{"Weroshiny Hub v36","https://raw.githubusercontent.com/syfta8/evade/refs/heads/main/WeroShiny-Hub"},{"Auto farm  Hub","https://raw.githubusercontent.com/gumanba/Scripts/main/EvadeEvent"},{"Draconic Hub","https://raw.githubusercontent.com/Unknownproooolucky/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua"}}},{title="Fisch",icon="fish",buttons={{"Space Hub","https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/Multi"},{"Speed Hub X","https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},{"Zenith Hub","https://raw.githubusercontent.com/Zenith-Devs/Zenith-Hub/main/loader"},{"Disch Script V2","https://raw.githubusercontent.com/hakariqScripts/disch2/refs/heads/main/disch%20script"},{"Nat Hub","https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"}}},{title="King Legacy",icon="crown",buttons={{"Tsuo Hub","https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/king%20legacy"},{"Genesis Hub","https://raw.githubusercontent.com/mainloadergg/GenesisHub/refs/heads/main/KingLegacy.lua"},{"OMG Hub","https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},{"Wukong Hub","https://raw.githubusercontent.com/duymanhm6-cyber/wukonghud/refs/heads/main/wukonghud"}}},{title="jjs kaisen",icon="crosshair",buttons={{"Khanhly Hub","https://raw.githubusercontent.com/khoavipok/Jjs-khanhly/refs/heads/main/1878725522944274.lua.txt"},{"TBO Hub","https://raw.githubusercontent.com/cool5013/TBO/main/TBOscript"},{"Culling Hub","https://raw.githubusercontent.com/damir512/CullingHubv1.0/refs/heads/main/Cullingotoole.lua"},{"jujutsuerV2","https://raw.githubusercontent.com/solarastuff/tze/refs/heads/main/JujutsuerV2.lua"},{"Nameless v12","https://raw.githubusercontent.com/NeziaReal/jjs/refs/heads/main/main.lua"},{"Kktjss hub1","https://raw.githubusercontent.com/KKT-Dev/KKT-JJS-hub/refs/heads/main/file/JJS%20Hub%20(New%20Vision)"},{"jjs legit hub","https://raw.githubusercontent.com/DevoidedRing/jujutsupuhh/refs/heads/main/LegitHubMaybe"}}},{title="Steal Brainrot",icon="shopping-basket",buttons={{"Hanami-Hub","https://gist.githubusercontent.com/ahjkwl1/b72febbd39910da3f9679889eba268fc/raw/40fcc15b9a34f1411d58ee9554296b0b438dc169/Hanami-Hub"},{"RIFT Hub","https://rifton.top/loader.lua"},{"BRAINROT PLICE","https://loadstring.net/raw/PSH2TOWUGP"},{"Chilli Hub","https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"}}}};for v331,v332 in ipairs(v259) do local v333=0;local v334;while true do if (v333==(236 -(46 + 190))) then v334=v256:Tab({Title=v332.title,Icon=v332.icon});for v526,v527 in ipairs(v332.buttons) do local v528=v527[96 -(51 + 44) ];local v529=v527[1 + 1 ];local v530=((type(v527[1320 -(1114 + 203) ])=="function") and v527[729 -(228 + 498) ]) or nil ;v334:Button({Title=v528,Desc="Bấm để xem code bên trong script",Callback=function() v125(v528,v529,v530);end});end break;end end end local function v260() pcall(function() if  not v128 then return;end local v382=v128.UIElements;local v383=v382 and v382.SideBar ;if  not v383 then return;end local v384=v383:FindFirstChild("Frame");if  not v384 then return;end local v385=v384:FindFirstChildOfClass("UIListLayout");local v386=(v385 and v385.AbsoluteContentSize.Y) or (0 + 0) ;if (v386<=(0 + 0)) then v386=v384.AbsoluteSize.Y;end local v387=v383.AbsoluteSize.Y;v383.AutomaticCanvasSize=Enum.AutomaticSize.Y;v383.ScrollingEnabled=true;if ((v386 + (675 -(174 + 489)))<=v387) then local v490=0;local v491;while true do if (v490==0) then v491=0 -0 ;while true do if (v491==(1905 -(830 + 1075))) then v383.ScrollBarThickness=524 -(303 + 221) ;return;end end break;end end end local v391=v382.Main;local v392=(v391 and v391.AbsoluteSize.Y) or 460 ;local v393=workspace.CurrentCamera.ViewportSize.Y;local v394=(v391 and v391.Size.Y) or UDim.new(1269 -(231 + 1038) ,384 + 76 ) ;local v395=1;if ((v394.Scale==0) and (v394.Offset>(1162 -(171 + 991))) and (v392>(0 -0))) then v395=v392/v394.Offset ;end local v396=v394.Offset + (((v386 + (42 -26)) -v387)/v395) ;local v397=(v393 * (0.86 -0))/v395 ;if (v396>v397) then v396=v397;v383.ScrollBarThickness=5;v383.ScrollBarImageColor3=Color3.fromRGB(205 + 50 ,105,180);v383.ScrollBarImageTransparency=0.3 -0 ;else v383.ScrollBarThickness=0 -0 ;end pcall(function() v128:SetSize(nil,UDim2.new(v391.Size.X.Scale,v391.Size.X.Offset,0,v396));end);end);end task.spawn(function() local v335=0 -0 ;while true do if (v335==(0 -0)) then task.wait(1248.4 -(111 + 1137) );v260();v335=1;end if (v335==(159 -(91 + 67))) then task.wait(1);v260();break;end end end);pcall(function() workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(function() task.wait(0.25 -0 );v260();end);end);do local v336=game:GetService("RunService");local v337=true;local v338=setmetatable({},{__mode="k"});local v339=false;local v340=nil;local v341=nil;local v342=0 + 0 ;local function v343(v398,v399,v400) local v401,v402=pcall(function() return v398[v399];end);if ( not v401 or (v402==v400)) then return;end local v403=v338[v398];if  not v403 then local v496=0;while true do if (v496==(523 -(423 + 100))) then v403={};v338[v398]=v403;break;end end end if (v403[v399]==nil) then v403[v399]=v402;end local v404=pcall(function() v398[v399]=v400;end);if  not v404 then v403[v399]=nil;end end local function v344(v405) pcall(function() if v405:IsA("BasePart") then local v531=0 + 0 ;while true do if (v531==(0 -0)) then v343(v405,"Material",Enum.Material.Plastic);v343(v405,"Reflectance",0);v531=1;end if (v531==(1 + 0)) then v342=v342 + (772 -(326 + 445)) ;break;end end elseif (v405:IsA("Decal") or v405:IsA("Texture")) then v343(v405,"Transparency",4 -3 );end end);end local function v345() local v406=0 -0 ;local v407;local v408;while true do if (v406==(9 -5)) then for v541 in pairs(v338) do v408=v408 + (712 -(530 + 181)) ;end return "✔ ĐÃ BOOST FPS:\n"   .. "• QualityLevel = Level01 (thấp nhất)\n"   .. "• "   .. v342   .. " part -> Material Plastic + Reflectance 0 (đất/đá/nước không còn bóng đổ bóng gương)\n"   .. "• Decal/Texture -> Transparency 1 (an hoa van, bang hieu, logo; quan ao in hinh cua nguoi khac cung an theo)\n"   .. ((v337 and "• Tu dong xu ly part/decal moi sinh ra (doi dao, zone map)\n") or "• Chi xu ly 1 lan luc bam nut (part moi sinh giu nguyen do hoa)\n")   .. "\nQuet qua "   .. v407   .. " object, da luu "   .. v408   .. " gia tri cu. Bam [↩ Trả lại cài đặt gốc] la ve dung nhu luc dau.\n"   .. "KHONG Destroy thu gi, khong doi speed/jump/camera -> ko bi report." ;end if (v406==2) then v407=0;for v542,v543 in ipairs(game:GetDescendants()) do local v544=881 -(614 + 267) ;while true do if (v544==(33 -(19 + 13))) then if ((v407%400)==(0 -0)) then task.wait();end break;end if (v544==(0 -0)) then v344(v543);v407=v407 + 1 ;v544=2 -1 ;end end end v406=1 + 2 ;end if (v406==(4 -1)) then if v337 then v340=game.DescendantAdded:Connect(function(v577) local v578=0 -0 ;while true do if ((1812 -(1293 + 519))==v578) then if  not v339 then return;end v344(v577);break;end end end);end v408=0 -0 ;v406=9 -5 ;end if (v406==0) then if v339 then return "Boost FPS đang bật rồi (đang tự xử lý đồ họa mới). Muốn chạy lại từ đầu thì bấm [↩ Trả lại cài đặt gốc] trước.";end v339=true;v406=1 -0 ;end if (v406==(4 -3)) then v342=0 -0 ;pcall(function() local v545=0 + 0 ;while true do if (v545==0) then v341=settings().Rendering.QualityLevel;settings().Rendering.QualityLevel=Enum.QualityLevel.Level01;break;end end end);v406=1 + 1 ;end end end local function v346() local v409=0 -0 ;local v410;while true do if (v409==0) then if  not v339 then return "Chưa bật boost FPS, không có gì để trả lại.";end v339=false;v409=1 + 0 ;end if (v409==(1 + 2)) then v338=setmetatable({},{__mode="k"});v342=0 + 0 ;v409=1100 -(709 + 387) ;end if ((1860 -(673 + 1185))==v409) then v410=0 -0 ;for v546,v547 in pairs(v338) do for v562,v563 in pairs(v547) do local v564=0 -0 ;while true do if (v564==(0 -0)) then pcall(function() v546[v562]=v563;end);v410=v410 + 1 + 0 ;break;end end end end v409=3 + 0 ;end if (4==v409) then return "✔ Đã trả lại cài đặt gốc ("   .. v410   .. " thuoc tinh da phuc hoi).\n"   .. "Chat lieu, do phan xa, hoa van/texture va QualityLevel tro ve nhu luc dau.\n"   .. "Object sinh ra sau luc boost thi van giu nguyen, khong bi pha." ;end if (v409==(1 -0)) then if v340 then local v565=0 + 0 ;local v566;while true do if (v565==(0 -0)) then v566=0;while true do if (v566==(0 -0)) then v340:Disconnect();v340=nil;break;end end break;end end end pcall(function() settings().Rendering.QualityLevel=v341;end);v409=2;end end end local v347,v348=nil,nil;local v349=nil;local v350;local function v351() if v347 then v347:Destroy();end v347=Instance.new("ScreenGui");v347.Name="H4XDARLING009_PerfHud";v347.ResetOnSpawn=false;v347.IgnoreGuiInset=true;v347.DisplayOrder=1001877 -(446 + 1434) ;v347.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;local v417=false;pcall(function() local v451=1283 -(1040 + 243) ;while true do if ((0 -0)==v451) then if gethui then v347.Parent=gethui();else v347.Parent=game:GetService("CoreGui");end v417=true;break;end end end);if  not v417 then v347.Parent=v10:WaitForChild("PlayerGui");end v348=Instance.new("TextLabel");v348.Parent=v347;v348.Size=UDim2.new(1847 -(559 + 1288) ,2061 -(609 + 1322) ,454 -(13 + 441) ,30);v348.Position=UDim2.new(1, -(523 -383),2 -1 , -(199 -159));v348.BackgroundTransparency=1 + 0 ;v348.Text="FPS: --";v348.Font=Enum.Font.GothamBold;v348.TextSize=72 -52 ;v348.TextColor3=Color3.fromRGB(120,91 + 164 ,62 + 78 );v348.TextStrokeTransparency=0.5 -0 ;v348.TextStrokeColor3=Color3.fromRGB(0 + 0 ,0,0 -0 );v348.TextXAlignment=Enum.TextXAlignment.Right;v348.TextYAlignment=Enum.TextYAlignment.Bottom;local function v433(v452,v453,v454,v455) local v456=0 + 0 ;local v457;local v458;local v459;while true do local v500=0 + 0 ;while true do if (v500==(0 + 0)) then if (v456==(0 + 0)) then v457=Instance.new("TextButton");v457.Parent=v347;v457.Size=UDim2.new(0 + 0 ,461 -(153 + 280) ,0 -0 ,26 + 2 );v457.Position=UDim2.new(1 + 0 ,v453,1 + 0 , -(37 + 3));v456=1;end if (v456==1) then v457.BackgroundColor3=Color3.fromRGB(14,11 + 3 ,25 -8 );v457.BackgroundTransparency=0.35 + 0 ;v457.BorderSizePixel=667 -(89 + 578) ;v457.Text=v452;v456=2 + 0 ;end v500=1;end if (v500==(3 -1)) then if (2==v456) then v457.TextColor3=Color3.fromRGB(255,1304 -(572 + 477) ,255);v457.Font=Enum.Font.GothamBold;v457.TextSize=15;v457.AutoButtonColor=true;v456=1 + 2 ;end if (v456==5) then local v602=0;while true do if (v602==0) then v457.MouseButton1Click:Connect(v455);return v457;end end end break;end if ((1 + 0)==v500) then if (v456==3) then v458=Instance.new("UICorner");v458.CornerRadius=UDim.new(1 + 0 ,86 -(84 + 2) );v458.Parent=v457;v459=Instance.new("UIStroke");v456=4;end if (v456==(6 -2)) then v459.Color=Color3.fromRGB(184 + 71 ,255,1097 -(497 + 345) );v459.Transparency=0.65 + 0 ;v459.Thickness=1;v459.Parent=v457;v456=5;end v500=2;end end end end v433("x", -178,"Tat dong ho FPS (giu nguyen do hoa da boost)",function() pcall(v350);end);v433("R", -212,"Restore: tra lai cai do hoa goc cua game",function() local v460=0 + 0 ;while true do if ((1333 -(605 + 728))==v460) then pcall(v346);pcall(v350);break;end end end);local v434=0 + 0 ;local v435=os.clock();v349=v336.RenderStepped:Connect(function() local v461=0 -0 ;local v462;local v463;while true do if (v461==0) then if ((v348==nil) or (v348.Parent==nil)) then local v581=0 + 0 ;while true do if (v581==0) then local v625=0;while true do if (v625==0) then if v349 then local v640=0 -0 ;while true do if (v640==(0 + 0)) then v349:Disconnect();v349=nil;break;end end end return;end end end end end v434=v434 + (2 -1) ;v461=1 + 0 ;end if (v461==(491 -(457 + 32))) then if (v463>=(0.5 + 0)) then local v582=math.floor((v434/v463) + 0.5 );v434=1402 -(832 + 570) ;v435=v462;pcall(function() local v609=0 + 0 ;while true do if (0==v609) then v348.Text="FPS: "   .. v582 ;if (v582<30) then v348.TextColor3=Color3.fromRGB(255,21 + 59 ,283 -203 );elseif (v582<60) then v348.TextColor3=Color3.fromRGB(123 + 132 ,1006 -(588 + 208) ,80);else v348.TextColor3=Color3.fromRGB(323 -203 ,2055 -(884 + 916) ,140);end break;end end end);end break;end if (v461==(1 -0)) then v462=os.clock();v463=v462-v435 ;v461=2 + 0 ;end end end);end local function v352() local v436=653 -(232 + 421) ;while true do if (0==v436) then if v349 then local v567=1889 -(1569 + 320) ;while true do if (v567==0) then v349:Disconnect();v349=nil;break;end end end if v347 then v347:Destroy();v347=nil;v348=nil;end break;end end end v350=v352;function v129() local v437=0;local v438;while true do if (v437==0) then v438=0 + 0 ;while true do if ((1 + 0)==v438) then pcall(v352);break;end if (v438==0) then if v1 then return;end pcall(v346);v438=3 -2 ;end end break;end end end v258:Section({Title="Optimization & Boost"});v258:Button({Title="Boost FPS (Remove Textures)",Desc="Giảm cấu hình đồ họa xuống mức thấp nhất",Callback=function() local v439=v345();v126("Tăng fps",v439);if (v339 and  not v347) then v351();end pcall(function() v7:Notify({Title="FPS Boost",Content="Đã tối ưu mượt mà!",Duration=3});end);end});v258:Button({Title="↩ Trả lại cài đặt gốc",Desc="Tắt boost, khôi phục đúng chat lieu / hinh in / do phan xa ban đầu",Callback=function() v126("Tăng fps",v346());end});v258:Button({Title="📊 Đồng hồ FPS",Desc="Bật/tắt ô đếm FPS góc phải dưới (xanh >60, vàng 30-60, đỏ <30)",Callback=function() if v347 then local v501=0;while true do if (v501==(605 -(316 + 289))) then v352();v126("Tăng fps","Đã tắt đồng hồ FPS.");break;end end else local v502=0 -0 ;while true do if (v502==(0 + 0)) then v351();v126("Tăng fps","Đã bật đồng hồ FPS ở góc phải dưới.");break;end end end end});v258:Paragraph({Title="Mẹo ngoài script",Desc="Kéo Graphics slider xuống thấp nhất trong menu Esc của Roblox; "   .. "chơi ở cửa sổ nhỏ thay vì full screen; tắt tab trình duyệt đang phát video; "   .. "tắt ghi màn hình/overlay Discord. Mỗi cái ăn thêm vài FPS thật." });end local function v261(v353,v354,v355,v356) v353:Button({Title=v354,Desc=v356,Callback=function() local v440=0;while true do if (v440==0) then pcall(function() if setclipboard then setclipboard(v355);end end);v126(v354,v355   .. "\n\n----------------------------------------"   .. "\n✔ Link đã được COPY vào clipboard."   .. "\n👉 Dán vào trình duyệt (Ctrl+V rồi Enter) để mở."   .. "\n(Roblox không tự mở được trang web nên phải copy thế này.)" );break;end end end});end v257:Paragraph({Title="📞 Liên hệ",Desc="Bấm nút bên dưới là link được copy, dán vào trình duyệt để mở."});v261(v257,"🎮 Discord Server","https://discord.gg/4RGnAWArb","Vào máy chủ Discord của t");v261(v257,"📱 TikTok: playercodon009","https://www.tiktok.com/@playercodon009","Xem TikTok của t");local v262=[[
+--==============================================================
+-- H4XDARLING009 Hub v3.0 (ĐÃ SỬA - GIỮ NGUYÊN MENU WINDUI)
+-- 1. Menu giữ nguyên y hệt bản gốc (WindUI, sidebar)
+-- 2. Bấm tên script -> cửa sổ HIỆN LUÔN CODE bên trong script đó
+--    (có nút ▶ Chạy và 📋 Copy)
+-- 3. Cửa sổ xem code tự tạo chạy TRƯỚC -> dù menu WindUI lỗi vẫn có
+--    thông báo lỗi cụ thể trên màn hình
+-- 4. TRANG CHỦ có nút Discord / TikTok — bấm là copy link
+--    (Roblox ko tự mở trang web được -> copy rồi dán vào trình duyệt)
+-- 5. TRANG CHỦ có BẢNG GIÁ CÀY THUÊ bằng chữ (nút 📋 Copy)
+-- 6. Ấn nút — trên menu -> menu thu nhỏ thành thanh nhỏ trên cùng,
+--    bấm thanh đó mở lại menu (ĐÃ BỎ nút tròn hồng).
+--    PC = thanh pill mình tự vẽ, giờ bo giống hệt pill gốc trên mobi
+--    (nền đen đậm, viền gradient xanh->tím, ô icon ✥ màu hồng bên trái + vạch chia).
+--    MOBI = WindUI tự sinh thanh của nó rồi -> hub KHÔNG vẽ pill nữa,
+--    hết bị 2 thanh trùng nhau. Đổi tay: CUSTOM_PILL_MODE ở dưới.
+-- 7. TAB "Tăng fps" — đứng THỨ 2 trên sidebar (ngay sau Trang chủ):
+--    Section "Optimization & Boost" + nut "Boost FPS (Remove Textures)":
+--    QualityLevel = Level01, moi part -> Material Plastic + Reflectance 0,
+--    moi Decal/Texture -> Transparency 1 (an hoa van/logo/hinh in quan ao).
+--    Co the TU XU LY part sinh sau (doi dao/zone map moi) - xem
+--    TU_XU_LY_PART_MOI o khoi "Tăng fps".
+--    + 📊 dong ho FPS do that + nut ↩ Trả lại cài đặt gốc.
+--    MOI THUOC TINH DOI DI DUOC LUU LAI -> bam [↩] hoac [R] la ve dung nhu cu,
+--    khong Destroy object nao (ko mat Sky/bau troi, chi an hinh in tren quan ao).
+--    Ko đụng tới speed / jump / camera / ESP / bất cứ thứ gì ảnh hưởng
+--    người chơi khác -> chạy game nào cũng được, ko bị report.
+-- 8. PHIM TAT: bam Left Ctrl = mo menu, bam lan nua = thu menu thanh pill
+--    (bam vao thanh pill do cung mo lai duoc). Bam la mo/thu LIEN TUC,
+--    khong phai cho tha tay. Neu luc giu Ctrl ma bam them phim/chuot khac
+--    (Ctrl+C, Ctrl+V, Ctrl+X...) thi no tu hoan lai, nen ko pha copy/paste.
+--    Doi phim: sua bang MENU_TOGGLE_KEYS ben duoi.
+-- 9. DA SUA HAN LOI "tat hub roi bam Ctrl -> Roblox bi dong/ung":
+--    Nguyen nhan: ta TU Destroy ScreenGui cua WindUI ma khong cho WindUI cat
+--    cac ket noi noi bo cua no (keo cua, phim, tween) -> WindUI van chay tiep
+--    tren do da chet, bam Ctrl la noi chien day chuyen lam vung ca game.
+--    Cach nay: an X / chuot phai pill -> goi ham DON GOC cua WindUI truoc de
+--    tu no don minh, xong hub moi don pill + cua so code cua no.
+--    Nut — va thanh pill van goi Close/Open GOC cua WindUI (menu thu dung
+--    hieu ung, khong con ki an nham cai ScreenGui khong phai cua so nhu ban
+--    truoc), nhung chi duoc goi khi hubAlive = true VA con ScreenGui "WindUI"
+--    song -> GUI chet thi phim tat bi cat ket noi ngay.
+--    Them 3 lop bao ve nua:
+--      • moi lan bam deu nam trong pcall; loi 2 lan = tu cat han phim tat
+--        (menu van mo/thu duoc bang thanh pill, game khong chet nua).
+--      • vong do sat 0.5s: moi ScreenGui "WindUI" deu mat = hub tu tat.
+--      • don GUI khi tat hub lam theo tung buoc cach nhau 1 frame.
+--    Tat hub (X / chuot phai vao pill) thi BOOST FPS + dong ho FPS VAN CON chay,
+--    dieu khien bang 2 nut [x] [R] canh dong ho (xem KEEP_PERF_ON_CLOSE o duoi).
+--    Ctrl sau khi tat hub chi con la phim trang, khong the lam dong Roblox.
+-- 10. TAB KHONG CON BI GIOI HAN: them bao nhieu section cung hien het.
+--    Sidebar cua WindUI von la ScrollingFrame nhung AN thanh cuon -> tab thu 10
+--    tro di tu dong bi day xuong duoi, nhin tuong la mat. Hub giu do tong chieu
+--    cao danh sach tab va PHONG TO cua so vua du hien het (toi da ~86% man hinh);
+--    qua nhieu tab thi tu bat thanh cuon mau hong de keo xuong.
+--    Them 20-30 tab muon tim nhanh thi doi HIEN_O_TIM_KIEM duoi day = true.
+--==============================================================
+
+-- ==================== PHIM TAT MO/TAT MENU (sua o day) ====================
+-- Mac dinh: Left Ctrl (bam 1 cai la mo/thu menu ngay, ko phai giu roi tha).
+-- An toan voi Ctrl+C / Ctrl+V / Ctrl+X: neu luc giu Ctrl ma co bam them
+-- phim hoac chuot khac thi no tu hoan lai dung trang thai cu.
+-- Them bo phat khac vao danh sach neu thich, vi du:
+--   Enum.KeyCode.RightControl, Enum.KeyCode.RightShift, Enum.KeyCode.Insert, Enum.KeyCode.FFive
+local MENU_TOGGLE_KEYS = {
+    Enum.KeyCode.LeftControl,
+}
+
+-- ==================== TAT HUB THI BOOST FPS / FPS CO CHAY TIEP? ====================
+-- true  = an X tat hub thi menu bien mat het, NHUNG do hoa da boost van con
+--         nguyen + dong ho FPS van con hien goc phai duoi man hinh.
+--         (Ngay canh dong ho FPS co 2 nut nho: [x] = tat dong ho (van giu boost),
+--          [R] = Restore, tra lai cai dat goc cua game -> ko can mo hub nua.)
+-- false = tat hub la sach will (tra lai do hoa + an FPS) nhu cu.
+local KEEP_PERF_ON_CLOSE = true
+
+-- ==================== NHIEU TAB THI CO O TIM KIEM? ====================
+-- Sidebar tab KHONG bi gioi han nua (hub tu phong to cua so + bat thanh cuon).
+-- De true = hien them o TIM KIEM o dau sidebar -> up 20-30 tab van tim script nhanh.
+-- De false = giao dien giong het nhu cu (khong co o tim).
+local HIEN_O_TIM_KIEM = false
+
+-- ==================== XÓA MENU CŨ (chống đúp khi chạy lại) ====================
+do
+    local roots = {}
+    pcall(function()
+        if gethui then
+            table.insert(roots, gethui())
+        end
+    end)
+    pcall(function()
+        table.insert(roots, game:GetService("CoreGui"))
+    end)
+    pcall(function()
+        local pg = game:GetService("Players").LocalPlayer:FindFirstChildOfClass("PlayerGui")
+        if pg then
+            table.insert(roots, pg)
+        end
+    end)
+    for _, root in ipairs(roots) do
+        pcall(function()
+            local old = root:FindFirstChild("H4XDARLING009_CodeViewer", true)
+            if old then
+                old:Destroy()
+            end
+        end)
+        pcall(function()
+            local oldPill = root:FindFirstChild("H4XDARLING009_Pill", true)
+            if oldPill then
+                oldPill:Destroy()
+            end
+        end)
+        pcall(function()
+            local oldHud = root:FindFirstChild("H4XDARLING009_PerfHud", true)
+            if oldHud then
+                oldHud:Destroy()
+            end
+        end)
+        pcall(function()
+            for _, sg in ipairs(root:GetChildren()) do
+                if sg:IsA("ScreenGui") and sg.Name == "WindUI" then
+                    sg:Destroy()
+                end
+            end
+        end)
+    end
+end
+
+-- ==================== HÀM BÁO THÔNG BÁO TRÊN MÀN HÌNH ====================
+local function notify(title, text, dur)
+    task.spawn(function()
+        local okNotify = false
+        for _ = 1, 6 do
+            okNotify = pcall(function()
+                game:GetService("StarterGui"):SetCore("SendNotification", {
+                    Title = title,
+                    Text = text,
+                    Duration = dur or 5
+                })
+            end)
+            if okNotify then
+                break
+            end
+            task.wait(1)
+        end
+        if not okNotify then
+            warn("[H4X Hub] " .. tostring(title) .. " | " .. tostring(text))
+        end
+    end)
+end
+
+-- ==================== KIEM TRA EXECUTOR CO CHAY DUOC HUB KHONG ====================
+-- Nhieu executor loc loadstring/load/gethui -> hub im lang khong len duoc.
+if type(loadstring) ~= "function" and type(load) ~= "function" then
+    notify("Hub Lỗi", "Executor này chặn loadstring -> ko chạy hub được. Đổi executor khác (hoặc bật chế độ Luau exploit).", 12)
+    return
+end
+
+-- Dung loadstring cua executor, neu executor chi co `load` thi dung `load`
+local RUNCHUNK = (type(loadstring) == "function") and loadstring or load
+
+-- ==================== TẢI WINDUI ====================
+-- 3 link nguồn, cai nao tai duoc thi dung cai do (mang VN hay bi chan link
+-- github releases -> co raw + jsdelivr lam duong phong). Loi cu the se hien
+-- len man hinh de guoi cho t xem.
+local WINDUI_SOURCES = {
+    "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua",
+    "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
+    "https://cdn.jsdelivr.net/gh/Footagesus/WindUI@main/dist/main.lua",
+}
+
+local ok = false
+local WindUI = nil
+local loadErr = "khong thu duoc link nao"
+
+for _, url in ipairs(WINDUI_SOURCES) do
+    local oneOk, result = pcall(function()
+        local source = game:HttpGet(url, true)
+        if type(source) ~= "string" then
+            error("HttpGet tra ve " .. type(source))
+        end
+        if #source < 2000 then
+            -- thuong la trang HTML (404 / bi chan) chu khong phai code Lua
+            error("bai tai ve qua ngan (" .. #source .. " ky tu), co the la trang loi")
+        end
+        local chunk, chunkErr = RUNCHUNK(source)
+        if not chunk then
+            error("loi dong code: " .. tostring(chunkErr))
+        end
+        local lib = chunk()
+        if type(lib) ~= "table" then
+            error("WindUI khong tra ve table (" .. type(lib) .. ")")
+        end
+        return lib
+    end)
+    if oneOk and type(result) == "table" then
+        ok = true
+        WindUI = result
+        break
+    end
+    loadErr = tostring(result)
+    warn("[H4X Hub] WindUI link loi: " .. url .. " | " .. loadErr)
+end
+
+if not ok or type(WindUI) ~= "table" then
+    notify("Hub Lỗi", "Ko tải được WindUI (ca 3 link). Lỗi: " .. loadErr:sub(1, 120)
+        .. " | Check lại mạng/RAM hoặc executor có cho HttpGet không.", 12)
+    return
+end
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- ==================== THEME HỒNG TÙY CHỈNH ====================
+pcall(function()
+    WindUI:AddTheme({
+        Name = "PinkH4X",
+        Accent = Color3.fromRGB(255, 105, 180),
+        Dialog = Color3.fromRGB(40, 15, 28),
+        Outline = Color3.fromRGB(255, 255, 255),
+        Text = Color3.fromRGB(255, 255, 255),
+        Placeholder = Color3.fromRGB(210, 170, 190),
+        Background = Color3.fromRGB(16, 16, 16),
+        Button = Color3.fromRGB(233, 95, 116),
+        Icon = Color3.fromRGB(255, 105, 180),
+        Toggle = Color3.fromRGB(51, 199, 89),
+        Slider = Color3.fromRGB(255, 105, 180),
+        Checkbox = Color3.fromRGB(255, 105, 180),
+        PanelBackground = Color3.fromRGB(255, 255, 255),
+        PanelBackgroundTransparency = 0.95,
+        SliderIcon = Color3.fromRGB(255, 105, 180),
+        Primary = Color3.fromRGB(255, 105, 180),
+        LabelBackground = Color3.fromRGB(0, 0, 0),
+        LabelBackgroundTransparency = 0.83,
+        ElementBackground = Color3.fromRGB(45, 30, 40),
+        ElementBackgroundTransparency = 0,
+    })
+end)
+
+--==============================================================
+-- 📜 CỬA SỔ XEM CODE (tự tạo, ko phụ thuộc WindUI -> chạy trước)
+--==============================================================
+local COLOR_PRIMARY = Color3.fromRGB(255, 105, 180) -- hồng
+local COLOR_WHITE   = Color3.fromRGB(255, 255, 255)
+local COLOR_GRAY    = Color3.fromRGB(60, 60, 60)
+local COLOR_BG      = Color3.fromRGB(30, 30, 36)
+local COLOR_CODE_BG = Color3.fromRGB(22, 22, 27)
+
+local ViewerGui = Instance.new("ScreenGui")
+ViewerGui.Name = "H4XDARLING009_CodeViewer"
+ViewerGui.ResetOnSpawn = false
+ViewerGui.DisplayOrder = 1000000 -- hiện trên tất cả
+ViewerGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+do
+    local guiParent = nil
+    pcall(function()
+        if gethui then
+            guiParent = gethui()
+        else
+            guiParent = game:GetService("CoreGui")
+        end
+    end)
+    local parented = false
+    if guiParent then
+        parented = pcall(function()
+            ViewerGui.Parent = guiParent
+        end)
+    end
+    if not parented then
+        ViewerGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+    end
+end
+
+local Viewer = Instance.new("Frame")
+Viewer.Name = "CodeViewer"
+Viewer.Size = UDim2.new(0, 620, 0, 420)
+Viewer.Position = UDim2.new(0.5, -310, 0.5, -210)
+Viewer.BackgroundColor3 = COLOR_BG
+Viewer.BorderSizePixel = 0
+Viewer.Active = true
+Viewer.Draggable = true
+Viewer.Visible = false
+Viewer.Parent = ViewerGui
+
+local ViewerCorner = Instance.new("UICorner")
+ViewerCorner.CornerRadius = UDim.new(0, 14)
+ViewerCorner.Parent = Viewer
+
+local ViewerStroke = Instance.new("UIStroke")
+ViewerStroke.Color = COLOR_PRIMARY
+ViewerStroke.Thickness = 2
+ViewerStroke.Parent = Viewer
+
+-- Nút đóng
+local CloseViewerBtn = Instance.new("TextButton")
+CloseViewerBtn.Size = UDim2.new(0, 90, 0, 32)
+CloseViewerBtn.Position = UDim2.new(0, 12, 0, 10)
+CloseViewerBtn.BackgroundColor3 = COLOR_GRAY
+CloseViewerBtn.Text = "← Đóng"
+CloseViewerBtn.TextColor3 = COLOR_WHITE
+CloseViewerBtn.Font = Enum.Font.SourceSansBold
+CloseViewerBtn.TextSize = 14
+CloseViewerBtn.Parent = Viewer
+local CloseViewerCorner = Instance.new("UICorner")
+CloseViewerCorner.CornerRadius = UDim.new(0, 6)
+CloseViewerCorner.Parent = CloseViewerBtn
+
+-- Tiêu đề
+local ViewerTitle = Instance.new("TextLabel")
+ViewerTitle.Size = UDim2.new(1, -230, 0, 32)
+ViewerTitle.Position = UDim2.new(0, 112, 0, 10)
+ViewerTitle.BackgroundTransparency = 1
+ViewerTitle.Text = "📜 Script"
+ViewerTitle.TextColor3 = COLOR_WHITE
+ViewerTitle.Font = Enum.Font.SourceSansBold
+ViewerTitle.TextSize = 16
+ViewerTitle.TextXAlignment = Enum.TextXAlignment.Left
+ViewerTitle.TextTruncate = Enum.TextTruncate.AtEnd
+ViewerTitle.Parent = Viewer
+
+-- Nút chạy
+local RunBtn = Instance.new("TextButton")
+RunBtn.Size = UDim2.new(0, 80, 0, 32)
+RunBtn.Position = UDim2.new(1, -182, 0, 10)
+RunBtn.BackgroundColor3 = Color3.fromRGB(60, 170, 90)
+RunBtn.Text = "▶ Chạy"
+RunBtn.TextColor3 = COLOR_WHITE
+RunBtn.Font = Enum.Font.SourceSansBold
+RunBtn.TextSize = 14
+RunBtn.Parent = Viewer
+local RunCorner = Instance.new("UICorner")
+RunCorner.CornerRadius = UDim.new(0, 6)
+RunCorner.Parent = RunBtn
+
+-- Nút copy
+local CopyBtn = Instance.new("TextButton")
+CopyBtn.Size = UDim2.new(0, 80, 0, 32)
+CopyBtn.Position = UDim2.new(1, -94, 0, 10)
+CopyBtn.BackgroundColor3 = COLOR_PRIMARY
+CopyBtn.Text = "📋 Copy"
+CopyBtn.TextColor3 = COLOR_WHITE
+CopyBtn.Font = Enum.Font.SourceSansBold
+CopyBtn.TextSize = 14
+CopyBtn.Parent = Viewer
+local CopyCorner = Instance.new("UICorner")
+CopyCorner.CornerRadius = UDim.new(0, 6)
+CopyCorner.Parent = CopyBtn
+
+-- Khung cuộn code
+local CodeScroll = Instance.new("ScrollingFrame")
+CodeScroll.Size = UDim2.new(1, -24, 1, -54)
+CodeScroll.Position = UDim2.new(0, 12, 0, 48)
+CodeScroll.BackgroundColor3 = COLOR_CODE_BG
+CodeScroll.BorderSizePixel = 0
+CodeScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
+CodeScroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+CodeScroll.ScrollBarThickness = 6
+CodeScroll.ScrollBarImageColor3 = COLOR_PRIMARY
+CodeScroll.Parent = Viewer
+local CodeScrollCorner = Instance.new("UICorner")
+CodeScrollCorner.CornerRadius = UDim.new(0, 8)
+CodeScrollCorner.Parent = CodeScroll
+
+-- Hộp code (chỉ đọc, bôi đen copy tay được)
+local CodeBox = Instance.new("TextBox")
+CodeBox.Size = UDim2.new(1, -16, 0, 0)
+CodeBox.Position = UDim2.new(0, 8, 0, 6)
+CodeBox.AutomaticSize = Enum.AutomaticSize.Y
+CodeBox.BackgroundTransparency = 1
+CodeBox.Text = ""
+CodeBox.TextColor3 = Color3.fromRGB(220, 225, 235)
+CodeBox.Font = Enum.Font.Code
+CodeBox.TextSize = 13
+CodeBox.TextWrapped = false
+CodeBox.MultiLine = true
+CodeBox.TextEditable = false
+CodeBox.ClearTextOnFocus = false
+CodeBox.TextXAlignment = Enum.TextXAlignment.Left
+CodeBox.TextYAlignment = Enum.TextYAlignment.Top
+CodeBox.Parent = CodeScroll
+
+local viewerUrl = nil
+local viewerSource = nil
+local viewerBeforeRun = nil
+local viewerCopyText = nil -- dùng cho link / bảng giá (copy text thay vì code)
+
+local function OpenViewer(name, url, beforeRun)
+    viewerUrl = url
+    viewerSource = nil
+    viewerBeforeRun = beforeRun
+    viewerCopyText = nil
+    RunBtn.Visible = true
+    CopyBtn.Visible = true
+    ViewerTitle.Text = "⏳ " .. name .. " (đang tải...)"
+    CodeBox.Text = "-- Đang tải script, đợi nha..."
+    Viewer.Visible = true
+
+    task.spawn(function()
+        local fetchOk, src = pcall(function()
+            return game:HttpGet(url, true)
+        end)
+        if viewerUrl ~= url then return end -- user đã bấm script khác
+        if not fetchOk then
+            ViewerTitle.Text = "❌ " .. name
+            CodeBox.Text = "-- KHÔNG TẢI ĐƯỢC SCRIPT\n-- Lỗi: " .. tostring(src)
+                .. "\n-- Kiểm tra lại link hoặc executor có hỗ trợ HttpGet không."
+            return
+        end
+        viewerSource = src
+        ViewerTitle.Text = "📜 " .. name .. "  (" .. #src .. " ký tự)"
+        if #src > 16000 then
+            CodeBox.Text = src:sub(1, 16000)
+                .. "\n\n-- ⚠️ SCRIPT QUÁ DÀI: chỉ hiện 16000 ký tự đầu."
+                .. "\n-- Bấm nút [📋 Copy] để lấy TOÀN BỘ code."
+        else
+            CodeBox.Text = src
+        end
+    end)
+end
+
+-- Hiện 1 đoạn thông tin (link, bảng giá...) + copy được, KHÔNG có nút Chạy
+local function ShowInfo(name, text)
+    viewerUrl = nil
+    viewerSource = nil
+    viewerBeforeRun = nil
+    viewerCopyText = text
+    RunBtn.Visible = false
+    CopyBtn.Visible = true
+    ViewerTitle.Text = "ℹ️ " .. name
+    CodeBox.Text = text
+    Viewer.Visible = true
+end
+
+CloseViewerBtn.MouseButton1Click:Connect(function()
+    Viewer.Visible = false
+end)
+
+RunBtn.MouseButton1Click:Connect(function()
+    if not viewerUrl then return end
+    task.spawn(function()
+        local src = viewerSource
+        if not src then
+            local fetchOk, err = pcall(function()
+                src = game:HttpGet(viewerUrl, true)
+            end)
+            if not fetchOk then
+                warn("[Hub] Không tải được script: " .. tostring(err))
+                return
+            end
+        end
+        if viewerBeforeRun then
+            pcall(viewerBeforeRun)
+        end
+        local runOk, err = pcall(function()
+            RUNCHUNK(src)()
+        end)
+        if not runOk then
+            warn("[Hub] Lỗi chạy script: " .. tostring(err))
+        end
+    end)
+end)
+
+CopyBtn.MouseButton1Click:Connect(function()
+    task.spawn(function()
+        local src = viewerCopyText
+        if not src and viewerUrl then
+            src = viewerSource
+            if not src then
+                local fetchOk = pcall(function()
+                    src = game:HttpGet(viewerUrl, true)
+                end)
+                if not fetchOk then return end
+            end
+        end
+        if not src then return end
+        pcall(function()
+            if setclipboard then
+                setclipboard(src)
+            end
+        end)
+        CopyBtn.Text = "✔ Đã copy"
+        task.wait(1.2)
+        CopyBtn.Text = "📋 Copy"
+    end)
+end)
+
+local function collectRoots()
+    local roots = {}
+    pcall(function()
+        if gethui then
+            table.insert(roots, gethui())
+        end
+    end)
+    pcall(function()
+        table.insert(roots, game:GetService("CoreGui"))
+    end)
+    local pg = LocalPlayer:FindFirstChildOfClass("PlayerGui")
+    if pg then
+        table.insert(roots, pg)
+    end
+    return roots
+end
+
+--==============================================================
+-- 🪟 MENU WINDUI + CÁC NÚT (trong lồng xpcall: lỗi sẽ báo lên màn hình)
+--==============================================================
+local WindWindow = nil -- giữ tham chiếu cửa sổ
+local cleanUpPerf = nil -- tab "Tăng fps" gán hàm dọn vào đây, shutdownHub sẽ gọi
+
+local buildOk, buildErr = xpcall(function()
+    local Window = WindUI:CreateWindow({
+        Title = "H4XDARLING009 Hub",
+        Icon = "rbxassetid://10723345633",
+        Author = "H4XDARLING009",
+        Folder = "H4X9 Settings",
+        Size = UDim2.fromOffset(580, 460),
+        Transparent = true,
+        Theme = "Dark",
+        SideBarWidth = 170,
+        HasOutline = true,
+        HideSearchBar = not HIEN_O_TIM_KIEM
+    })
+    WindWindow = Window
+
+    -- Áp theme hồng sau khi cửa sổ đã tạo (an toàn, lỗi thì giữ Dark)
+    pcall(function()
+        WindUI:SetTheme("PinkH4X")
+    end)
+    pcall(function()
+        local current = WindUI:GetCurrentTheme()
+        if current ~= "PinkH4X" then
+            WindUI:SetTheme("Rose")
+        end
+    end)
+
+    local HomeTab = Window:Tab({
+        Title = "Trang chủ",
+        Icon = "house"
+    })
+
+    HomeTab:Paragraph({
+        Title = "Cách dùng",
+        Desc = "Bấm tên script ở các tab bên trái, cửa sổ mới sẽ hiện TOÀN BỘ CODE bên trong script đó."
+            .. " Trong cửa sổ code có nút ▶ Chạy (chạy luôn script) và 📋 Copy (copy toàn bộ code)."
+            .. " Nút — trên cửa sổ menu để thu nhỏ thành thanh nhỏ trên cùng, bấm thanh đó để mở lại menu"
+            .. " (PC: thanh do hub tự vẽ, kéo được, chuột phải = tắt hub. Mobi: dùng thanh gốc của WindUI, hub ko vẽ thêm -> hết bị 2 thanh)."
+            .. " PHIM TAT: bam Left Ctrl mo menu, bam lan nua thu (nham luc giu Ctrl bam C/V/X thi menu tu ve lai, doi phim o dau file)."
+            .. " An X tat hub thi menu mat het nhung BOOST FPS + FPS van chay: 2 nut [x] [R] canh dong ho FPS duoc dung thay hub."
+            .. " Tab Cai may: nut Boost FPS (Remove Textures) ha QualityLevel + Plastic hoa part + an Decal/Texture,"
+            .. " bam [↩ Trả lại cài đặt gốc] hoac nut [R] la ve dung nhu luc dau."
+            .. " Ban moi nhat: phim tat chi goi Close/Open cua WindUI khi GUI con song,"
+            .. " va neu co loi no tu tat han phim tat -> bam Ctrl sau khi tat hub thi game VAN AN TOAN."
+            .. " Trang này luôn có nút Discord / TikTok và bảng giá cày thuê."
+    })
+
+    --==============================================================
+    -- ⚙️ Tab "Tăng fps" — TẠO SỚM Ở ĐÂY để nó đứng THỨ 2 trên sidebar
+    --    (ngay sau Trang chủ). Nội dung + nút bấm của tab này được nhồi
+    --    ở khối do ... end bên dưới, sau vòng lặp các tab game.
+    --==============================================================
+    local PerfTab = Window:Tab({
+        Title = "Tăng fps",
+        Icon = "gauge"
+    })
+
+    --==============================================================
+    -- DỮ LIỆU CÁC SCRIPT (giữ nguyên danh sách gốc)
+    --==============================================================
+    local sections = {
+        {
+            title = "Blox Fruit",
+            icon = "swords",
+            buttons = {
+                {"RealKid Hub", "https://raw.githubusercontent.com/realkidhub/realkid/refs/heads/main/main.lua"},
+                {"Redz Hub", "https://raw.githubusercontent.com/bloxfruitsnokey/Redz/refs/heads/main/Redz/v1.luau"},
+                {"Teddy Hub", "https://raw.githubusercontent.com/teddyhubdev/diepvy/refs/heads/main/TeddyHub.lua"},
+                {"Quantum Onyx", "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"},
+                {"Hermanos Hub (PVP)", "https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"},
+                {"HoHo Hub (Freemium)", "https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"},
+                {"OMG Hub", "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},
+                {"bnn test ko use dc ", ""}
+            },
+        },
+        {
+            title = "Steal an Egg",
+            icon = "egg",
+            buttons = {
+                {"Lemon Hub", "https://raw.githubusercontent.com/kadit9999/stealanegg/refs/heads/main/lemonhub.lua"},
+                {"Chilli Hub", "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},
+                {"Ajian Hub (Luarmor)", "https://api.luarmor.net/files/v4/loaders/359e97f8618e9008afe5f496184ebb7c.lua"},
+                {"Zeroin Hub", "https://zeroinhub.com/api/script"},
+                {"Vezyx Hub", "https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-viet-hoa-v6-vip-pro98"},
+                {"Chili Hub v8", "https://id.tomroblox.com/raw/kairoblox/chilli-x-venyx-v8-finder-free-9836"},
+                {"Sena Hub", "https://raw.githubusercontent.com/senarblx/sena/refs/heads/main/loaderv2sena"},
+            },
+        },
+        {
+            title = "TSB",
+            icon = "swords",
+            buttons = {
+                {"Auto farm", "https://gitlab.com/zkay404-group/ProjectYielding/-/raw/main/ZKPublicFarm"},
+                {"Jnkie API Script (TSB)", "https://api.jnkie.com/api/v1/luascripts/public/52276846a0d8e73f3208d9206b7be7c8ea031f62e5707d45d0ec9abfdca35467/download"},
+                {"Legends Battlegrounds", "https://raw.githubusercontent.com/solarastuff/legendsbattlegrounds/refs/heads/main/legendary.lua"},
+                {"Phantasm Hub (TSB)", "https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Games/TSB.lua"},
+            },
+        },
+        {
+            title = "evade",
+            icon = "move",
+            buttons = {
+                {"Shader map đẹp Hub", "https://raw.githubusercontent.com/zugkun/CustomShader/refs/heads/main/JoevanShaderLite.lua"},
+                {"Yinyang Hub", "https://raw.githubusercontent.com/yesimsoul/Yin-Yang-Hub/refs/heads/main/evade"},
+                {"Moondiety Hub", "https://moondiety.com/loader"},
+                {"Ivory Hub", "https://jnkie.com/loaders/ivory"},
+                {"Rift Hub", "https://riftscripts.up.railway.app/api/v1/loader/hlwn-evade"},
+                {"Weroshiny Hub v36", "https://raw.githubusercontent.com/syfta8/evade/refs/heads/main/WeroShiny-Hub"},
+                {"Auto farm  Hub", "https://raw.githubusercontent.com/gumanba/Scripts/main/EvadeEvent"},
+                {"Draconic Hub", "https://raw.githubusercontent.com/Unknownproooolucky/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua"}
+
+            },
+        },
+        {
+            title = "Fisch",
+            icon = "fish",
+            buttons = {
+                {"Space Hub", "https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/Multi"},
+                {"Speed Hub X", "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
+                {"Zenith Hub", "https://raw.githubusercontent.com/Zenith-Devs/Zenith-Hub/main/loader"},
+                {"Disch Script V2", "https://raw.githubusercontent.com/hakariqScripts/disch2/refs/heads/main/disch%20script"},
+                {"Nat Hub", "https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"},
+            },
+        },
+        {
+            title = "King Legacy",
+            icon = "crown",
+            buttons = {
+                {"Tsuo Hub", "https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/king%20legacy"},
+                {"Genesis Hub", "https://raw.githubusercontent.com/mainloadergg/GenesisHub/refs/heads/main/KingLegacy.lua"},
+                {"OMG Hub", "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},
+                {"Wukong Hub", "https://raw.githubusercontent.com/duymanhm6-cyber/wukonghud/refs/heads/main/wukonghud"},
+            },
+        },
+        {
+            title = "jjs kaisen",
+            icon = "crosshair",
+            buttons = {
+                {"Khanhly Hub", "https://raw.githubusercontent.com/khoavipok/Jjs-khanhly/refs/heads/main/1878725522944274.lua.txt"},
+                {"TBO Hub", "https://raw.githubusercontent.com/cool5013/TBO/main/TBOscript"},
+                {"Culling Hub", "https://raw.githubusercontent.com/damir512/CullingHubv1.0/refs/heads/main/Cullingotoole.lua"},
+                {"jujutsuerV2", "https://raw.githubusercontent.com/solarastuff/tze/refs/heads/main/JujutsuerV2.lua"},
+                {"Nameless v12", "https://raw.githubusercontent.com/NeziaReal/jjs/refs/heads/main/main.lua"},
+                {"Kktjss hub1", "https://raw.githubusercontent.com/KKT-Dev/KKT-JJS-hub/refs/heads/main/file/JJS%20Hub%20(New%20Vision)"},
+                {"jjs legit hub", "https://raw.githubusercontent.com/DevoidedRing/jujutsupuhh/refs/heads/main/LegitHubMaybe"},
+            },
+        },
+        {
+            title = "Steal Brainrot",
+            icon = "shopping-basket",
+            buttons = {
+                {"Hanami-Hub", "https://gist.githubusercontent.com/ahjkwl1/b72febbd39910da3f9679889eba268fc/raw/40fcc15b9a34f1411d58ee9554296b0b438dc169/Hanami-Hub"},
+                -- Link duoi day 404 (repo m00ndiety/Steal-a-brainrot khong con ton tai tren
+                -- GitHub, kiem 25/10/2026) -> bam chi bao loi. Comment lai cho clean menu.
+                -- Co link moi thi bo "-- " dau dong va ghi lai nhu ben tren.
+                -- {"Moondiety Hub", "https://raw.githubusercontent.com/m00ndiety/Steal-a-brainrot/refs/heads/main/Steal-a-Brainrot"},
+                {"RIFT Hub", "https://rifton.top/loader.lua"},
+                {"BRAINROT PLICE", "https://loadstring.net/raw/PSH2TOWUGP"},
+                {"Chilli Hub", "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"},
+            }
+        },
+    }            
+    for _, section in ipairs(sections) do
+        local tab = Window:Tab({
+            Title = section.title,
+            Icon = section.icon
+        })
+
+        for _, item in ipairs(section.buttons) do
+            local name = item[1]
+            local url = item[2]
+            -- Chi cho phep truong thu 3 la HAM (truoc khi chay). Neu vo tinh ghi
+            -- true/false o do thi bo qua, de OpenViewer ko bi nhan gia tri sai.
+            local beforeRun = (type(item[3]) == "function") and item[3] or nil
+
+            tab:Button({
+                Title = name,
+                Desc = "Bấm để xem code bên trong script",
+                Callback = function()
+                    OpenViewer(name, url, beforeRun)
+                end
+            })
+        end
+    end
+
+    --==============================================================
+    -- ♾ KHONG GIOI HAN TAB (sidebar tu do = vo han)
+    -- Thanh tab ben trai cua WindUI THAT RA la ScrollingFrame (cuon duoc),
+    -- nhung no an thanh cuon (ScrollBarThickness = 0) nen them tab thu 10, 11..
+    -- tu dong bi "mat hut" xuong duoi -> nhin nhu bi gioi han so tab.
+    -- Khoi nay:
+    --   1) do tong chieu cao danh sach tab, PHONG TO cua so len vua du de hien
+    --      HET moi tab (toi da ~86% chieu cao man hinh),
+    --   2) neu van chua du (qua nhieu tab) thi BAT thanh cuon mau hong de
+    --      keo/cuon chuot xuong duoc.
+    --   -> Muon them bao nhieu section cung duoc, khong phai sua gi o day het.
+    --==============================================================
+    local function fitSidebar()
+        pcall(function()
+            if not WindWindow then return end
+            local ui = WindWindow.UIElements
+            local bar = ui and ui.SideBar
+            if not bar then return end
+            local inner = bar:FindFirstChild("Frame")
+            if not inner then return end
+
+            local layout = inner:FindFirstChildOfClass("UIListLayout")
+            local contentH = layout and layout.AbsoluteContentSize.Y or 0
+            if contentH <= 0 then contentH = inner.AbsoluteSize.Y end
+            local visH = bar.AbsoluteSize.Y
+
+            bar.AutomaticCanvasSize = Enum.AutomaticSize.Y
+            bar.ScrollingEnabled = true
+
+            if contentH + 12 <= visH then
+                -- du cho roi -> khong can lam gi
+                bar.ScrollBarThickness = 0
+                return
+            end
+
+            local main = ui.Main
+            local curH = main and main.AbsoluteSize.Y or 460
+            local screenY = workspace.CurrentCamera.ViewportSize.Y
+
+            -- WindUI co the dung UIScale (mobi) -> AbsoluteSize != Size.Offset.
+            -- Tinh ty le scale ra de cong chieu cao thieu vao Size that, khong
+            -- bi hieu ung "phong to dan" sau moi lan goi.
+            local sizeY = main and main.Size.Y or UDim.new(0, 460)
+            local scaleF = 1
+            if sizeY.Scale == 0 and sizeY.Offset > 0 and curH > 0 then
+                scaleF = curH / sizeY.Offset
+            end
+
+            local wantH = sizeY.Offset + (contentH + 16 - visH) / scaleF
+            local maxH = (screenY * 0.86) / scaleF
+
+            if wantH > maxH then
+                wantH = maxH
+                bar.ScrollBarThickness = 5
+                bar.ScrollBarImageColor3 = Color3.fromRGB(255, 105, 180)
+                bar.ScrollBarImageTransparency = 0.3
+            else
+                bar.ScrollBarThickness = 0
+            end
+
+            pcall(function()
+                WindWindow:SetSize(nil, UDim2.new(main.Size.X.Scale, main.Size.X.Offset, 0, wantH))
+            end)
+        end)
+    end
+
+    -- do 2 lan: layout cua WindUI tinh xong sau vai frame, va khi doi kich thuoc
+    -- man hinh (xoay mobi / phong to cua so) thi do lai
+    task.spawn(function()
+        task.wait(0.4)
+        fitSidebar()
+        task.wait(1)
+        fitSidebar()
+    end)
+    pcall(function()
+        workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+            task.wait(0.25)
+            fitSidebar()
+        end)
+    end)
+
+    --==============================================================
+    -- ⚙️ TAB "Tăng fps" — BOOST FPS (Remove Textures)
+    -- Nut nay chi ha do hoa MAY CUA BAN: QualityLevel Level01, part = Plastic +
+    -- Reflectance 0, an Decal/Texture. KHONG Destroy object nao, khong doi
+    -- speed / jump / camera, khong dong ly tinh -> game nao cung cho.
+    -- Moi thuoc tinh doi di duoc LUU LAI -> [↩ Trả lại cài đặt gốc] ve dung nhu cu.
+    --==============================================================
+    do
+        local RunService = game:GetService("RunService")
+
+        -- Muon part MOI sinh ra (Blox Fruits doi dao/zone, map load dan) tu dong
+        -- bi ha do hoa luon thi de true; de false = chi xu ly 1 lan luc bam nut.
+        local TU_XU_LY_PART_MOI = true
+
+        -- [object] = { [ten thuoc tinh] = gia tri cu }  (key yeu -> object bi xoa
+        -- thi tu do sạch, treo 10 tieng khong phat bot RAM)
+        local record = setmetatable({}, { __mode = "k" })
+        local perfOn = false
+        local partConn = nil
+        local renderOld = nil
+        local touched = 0
+
+        -- ghi lai gia tri cu roi moi doi (thu nao doc/ghi duoc moi danh -> ko loi)
+        local function setP(obj, prop, value)
+            local okRead, old = pcall(function()
+                return obj[prop]
+            end)
+            if not okRead or old == value then
+                return
+            end
+            local m = record[obj]
+            if not m then
+                m = {}
+                record[obj] = m
+            end
+            if m[prop] == nil then
+                m[prop] = old
+            end
+            local okWrite = pcall(function()
+                obj[prop] = value
+            end)
+            if not okWrite then
+                m[prop] = nil
+            end
+        end
+
+        -- xu ly 1 object: part -> Plastic + khong phan xa; decal/texture -> an di
+        local function applyBoost(obj)
+            pcall(function()
+                if obj:IsA("BasePart") then -- Part, MeshPart, ScriptPart
+                    setP(obj, "Material", Enum.Material.Plastic)
+                    setP(obj, "Reflectance", 0)
+                    touched = touched + 1
+                elseif obj:IsA("Decal") or obj:IsA("Texture") then
+                    setP(obj, "Transparency", 1)
+                end
+            end)
+        end
+
+        local function boostFPS()
+            if perfOn then
+                return "Boost FPS đang bật rồi (đang tự xử lý đồ họa mới). Muốn chạy lại từ đầu thì bấm [↩ Trả lại cài đặt gốc] trước."
+            end
+            perfOn = true
+            touched = 0
+
+            -- 1) QualityLevel = Level01 (lưu giá trị cũ để trả lại được)
+            pcall(function()
+                renderOld = settings().Rendering.QualityLevel
+                settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+            end)
+
+            -- 2) quat TOAN BO game: part + decal/texture
+            local count = 0
+            for _, obj in ipairs(game:GetDescendants()) do
+                applyBoost(obj)
+                count = count + 1
+                if count % 400 == 0 then
+                    task.wait() -- ko dong bang game khi map qua nhieu object
+                end
+            end
+
+            -- 3) part/decal sinh sau (doi dao, zone moi) tu xu ly tiep
+            if TU_XU_LY_PART_MOI then
+                partConn = game.DescendantAdded:Connect(function(obj)
+                    if not perfOn then
+                        return
+                    end
+                    applyBoost(obj)
+                end)
+            end
+
+            local saved = 0
+            for _ in pairs(record) do
+                saved = saved + 1
+            end
+            return "✔ ĐÃ BOOST FPS:\n"
+                .. "• QualityLevel = Level01 (thấp nhất)\n"
+                .. "• " .. touched .. " part -> Material Plastic + Reflectance 0 (đất/đá/nước không còn bóng đổ bóng gương)\n"
+                .. "• Decal/Texture -> Transparency 1 (an hoa van, bang hieu, logo; quan ao in hinh cua nguoi khac cung an theo)\n"
+                .. (TU_XU_LY_PART_MOI and "• Tu dong xu ly part/decal moi sinh ra (doi dao, zone map)\n"
+                    or "• Chi xu ly 1 lan luc bam nut (part moi sinh giu nguyen do hoa)\n")
+                .. "\nQuet qua " .. count .. " object, da luu " .. saved
+                .. " gia tri cu. Bam [↩ Trả lại cài đặt gốc] la ve dung nhu luc dau.\n"
+                .. "KHONG Destroy thu gi, khong doi speed/jump/camera -> ko bi report."
+        end
+
+        local function restoreLag()
+            if not perfOn then
+                return "Chưa bật boost FPS, không có gì để trả lại."
+            end
+            perfOn = false
+            if partConn then
+                partConn:Disconnect()
+                partConn = nil
+            end
+
+            pcall(function()
+                settings().Rendering.QualityLevel = renderOld
+            end)
+
+            local n = 0
+            for obj, props in pairs(record) do
+                for prop, oldVal in pairs(props) do
+                    pcall(function()
+                        obj[prop] = oldVal
+                    end)
+                    n = n + 1
+                end
+            end
+            record = setmetatable({}, { __mode = "k" })
+            touched = 0
+            return "✔ Đã trả lại cài đặt gốc (" .. n .. " thuoc tinh da phuc hoi).\n"
+                .. "Chat lieu, do phan xa, hoa van/texture va QualityLevel tro ve nhu luc dau.\n"
+                .. "Object sinh ra sau luc boost thi van giu nguyen, khong bi pha."
+        end
+
+        -- ---------- ĐỒNG HỒ FPS (góc phải dưới, đổi màu theo FPS) ----------
+        local perfGui, fpsLabel = nil, nil
+        local fpsConn = nil
+        local killHudSafe -- khai bao som de nut ben duoi goi duoc (ham that gan o duoi)
+
+        local function buildHud()
+            if perfGui then
+                perfGui:Destroy()
+            end
+            perfGui = Instance.new("ScreenGui")
+            perfGui.Name = "H4XDARLING009_PerfHud"
+            perfGui.ResetOnSpawn = false
+            perfGui.IgnoreGuiInset = true
+            perfGui.DisplayOrder = 999997
+            perfGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+            local placed = false
+            pcall(function()
+                if gethui then
+                    perfGui.Parent = gethui()
+                else
+                    perfGui.Parent = game:GetService("CoreGui")
+                end
+                placed = true
+            end)
+            if not placed then
+                perfGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+            end
+
+            fpsLabel = Instance.new("TextLabel")
+            fpsLabel.Parent = perfGui
+            fpsLabel.Size = UDim2.new(0, 130, 0, 30)
+            fpsLabel.Position = UDim2.new(1, -140, 1, -40)
+            fpsLabel.BackgroundTransparency = 1
+            fpsLabel.Text = "FPS: --"
+            fpsLabel.Font = Enum.Font.GothamBold
+            fpsLabel.TextSize = 20
+            fpsLabel.TextColor3 = Color3.fromRGB(120, 255, 140)
+            fpsLabel.TextStrokeTransparency = 0.5
+            fpsLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+            fpsLabel.TextXAlignment = Enum.TextXAlignment.Right
+            fpsLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+
+            -- 2 nut nho ben canh dong ho FPS: tat hub van dieu khien duoc,
+            -- ko can mo menu lai. [x] = an dong ho (giu boost), [R] = tra lai goc.
+            local function hudButton(txt, xOff, tip, onClick)
+                local b = Instance.new("TextButton")
+                b.Parent = perfGui
+                b.Size = UDim2.new(0, 28, 0, 28)
+                b.Position = UDim2.new(1, xOff, 1, -40)
+                b.BackgroundColor3 = Color3.fromRGB(14, 14, 17)
+                b.BackgroundTransparency = 0.35
+                b.BorderSizePixel = 0
+                b.Text = txt
+                b.TextColor3 = Color3.fromRGB(255, 255, 255)
+                b.Font = Enum.Font.GothamBold
+                b.TextSize = 15
+                b.AutoButtonColor = true
+                local cn = Instance.new("UICorner")
+                cn.CornerRadius = UDim.new(1, 0)
+                cn.Parent = b
+                local st = Instance.new("UIStroke")
+                st.Color = Color3.fromRGB(255, 255, 255)
+                st.Transparency = 0.65
+                st.Thickness = 1
+                st.Parent = b
+                b.MouseButton1Click:Connect(onClick)
+                return b
+            end
+
+            hudButton("x", -178, "Tat dong ho FPS (giu nguyen do hoa da boost)", function()
+                pcall(killHudSafe)
+            end)
+            hudButton("R", -212, "Restore: tra lai cai do hoa goc cua game", function()
+                pcall(restoreLag)
+                pcall(killHudSafe)
+            end)
+
+            local frames = 0
+            local last = os.clock()
+            fpsConn = RunService.RenderStepped:Connect(function()
+                -- neu dong ho da bi xoa (tat hub / bam [x]) thi tu ngat ket noi,
+                -- khong cham vao fpsLabel da chet -> tranh loi day chuyen
+                if fpsLabel == nil or fpsLabel.Parent == nil then
+                    if fpsConn then
+                        fpsConn:Disconnect()
+                        fpsConn = nil
+                    end
+                    return
+                end
+                frames = frames + 1
+                local now = os.clock()
+                local dt = now - last
+                if dt >= 0.5 then
+                    local fpsValue = math.floor(frames / dt + 0.5)
+                    frames = 0
+                    last = now
+                    pcall(function()
+                        fpsLabel.Text = "FPS: " .. fpsValue
+                        if fpsValue < 30 then
+                            fpsLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+                        elseif fpsValue < 60 then
+                            fpsLabel.TextColor3 = Color3.fromRGB(255, 210, 80)
+                        else
+                            fpsLabel.TextColor3 = Color3.fromRGB(120, 255, 140)
+                        end
+                    end)
+                end
+            end)
+        end
+
+        local function killHud()
+            if fpsConn then
+                fpsConn:Disconnect()
+                fpsConn = nil
+            end
+            if perfGui then
+                perfGui:Destroy()
+                perfGui = nil
+                fpsLabel = nil
+            end
+        end
+        killHudSafe = killHud
+
+        -- tab khác dùng lại nút —, X, nên hàm dọn này được goi khi tat hub
+        cleanUpPerf = function()
+            if KEEP_PERF_ON_CLOSE then
+                -- an X tat hub = chi don menu, do hoa van boost, FPS van chay
+                -- (muon tat FPS / tra lai do thi bam nut [x] [R] ben canh dong ho)
+                return
+            end
+            pcall(restoreLag)
+            pcall(killHud)
+        end
+
+        -- PerfTab đã được tạo SỚM ở trên (để đứng thứ 2 sau Trang chủ),
+        -- khối này chỉ nhồi nút vào tab đó.
+        PerfTab:Section({
+            Title = "Optimization & Boost"
+        })
+
+        PerfTab:Button({
+            Title = "Boost FPS (Remove Textures)",
+            Desc = "Giảm cấu hình đồ họa xuống mức thấp nhất",
+            Callback = function()
+                local msg = boostFPS()
+                ShowInfo("Tăng fps", msg)
+                -- nhu file goc: chay boost la FPS tu dong hien goc phai duoi
+                if perfOn and not perfGui then
+                    buildHud()
+                end
+                pcall(function()
+                    WindUI:Notify({
+                        Title = "FPS Boost",
+                        Content = "Đã tối ưu mượt mà!",
+                        Duration = 3
+                    })
+                end)
+            end
+        })
+
+        PerfTab:Button({
+            Title = "↩ Trả lại cài đặt gốc",
+            Desc = "Tắt boost, khôi phục đúng chat lieu / hinh in / do phan xa ban đầu",
+            Callback = function()
+                ShowInfo("Tăng fps", restoreLag())
+            end
+        })
+
+        PerfTab:Button({
+            Title = "📊 Đồng hồ FPS",
+            Desc = "Bật/tắt ô đếm FPS góc phải dưới (xanh >60, vàng 30-60, đỏ <30)",
+            Callback = function()
+                if perfGui then
+                    killHud()
+                    ShowInfo("Tăng fps", "Đã tắt đồng hồ FPS.")
+                else
+                    buildHud()
+                    ShowInfo("Tăng fps", "Đã bật đồng hồ FPS ở góc phải dưới.")
+                end
+            end
+        })
+
+        PerfTab:Paragraph({
+            Title = "Mẹo ngoài script",
+            Desc = "Kéo Graphics slider xuống thấp nhất trong menu Esc của Roblox; "
+                .. "chơi ở cửa sổ nhỏ thay vì full screen; tắt tab trình duyệt đang phát video; "
+                .. "tắt ghi màn hình/overlay Discord. Mỗi cái ăn thêm vài FPS thật."
+        })
+    end
+
+    --==============================================================
+    -- 📞 NÚT LIÊN HỆ (Discord / TikTok) — trong Trang chủ
+    -- Roblox KHÔNG tự mở được trang web -> bấm nút là COPY link,
+    -- link cũng hiện lên để m dán vào trình duyệt.
+    -- (Nút acc Roblox đã XÓA theo yêu cầu 21/10 -> đừng add lại, công khai
+    --  tên acc trong hub hay bị soi/report lắm.)
+    --==============================================================
+    local function ContactButton(tab, title, link, extraDesc)
+        tab:Button({
+            Title = title,
+            Desc = extraDesc,
+            Callback = function()
+                pcall(function()
+                    if setclipboard then
+                        setclipboard(link)
+                    end
+                end)
+                ShowInfo(title, link
+                    .. "\n\n----------------------------------------"
+                    .. "\n✔ Link đã được COPY vào clipboard."
+                    .. "\n👉 Dán vào trình duyệt (Ctrl+V rồi Enter) để mở."
+                    .. "\n(Roblox không tự mở được trang web nên phải copy thế này.)")
+            end
+        })
+    end
+
+    HomeTab:Paragraph({
+        Title = "📞 Liên hệ",
+        Desc = "Bấm nút bên dưới là link được copy, dán vào trình duyệt để mở."
+    })
+
+    ContactButton(HomeTab, "🎮 Discord Server", "https://discord.gg/4RGnAWArb", "Vào máy chủ Discord của t")
+    ContactButton(HomeTab, "📱 TikTok: playercodon009", "https://www.tiktok.com/@playercodon009", "Xem TikTok của t")
+
+    --==============================================================
+    -- 💰 BẢNG GIÁ CÀY THUÊ (chữ) — trong Trang chủ
+    --==============================================================
+    local PRICE_TEXT = [[
 💰 BẢNG GIÁ dịch vụ — H4XDARLING009 💰
 
 🔹 lưu ý khi  sử dụng dịch vụ
@@ -79,15 +1219,735 @@ Nếu vô sẽ bị HỦY ĐƠN và KHÔNG HOÀN TIỀN.
 📩 Liên hệ đặt đơn:
 • Discord: https://discord.gg/4RGnAWArb
 • Tiktok: playercodon009
-]];v257:Button({Title="💰 Bảng giá cày thuê",Desc="Xem toàn bộ giá bằng chữ (bấm 📋 Copy để copy)",Callback=function() v126("Bảng giá cày thuê",v262);end});end,function(v263) return v263;end);if  not v130 then local v357=1453 -(666 + 787) ;while true do if (0==v357) then pcall(function() for v549,v550 in ipairs(v127()) do for v568,v569 in ipairs(v550:GetChildren()) do if (v569:IsA("ScreenGui") and (v569.Name=="WindUI")) then v569:Destroy();end end end end);v3("Hub bị lỗi","Chụp dòng này gửi t: "   .. tostring(v131):sub(426 -(360 + 65) ,131 + 9 ) ,269 -(79 + 175) );v357=1 -0 ;end if (v357==(1 + 0)) then local v503=0 -0 ;while true do if (v503==(0 -0)) then warn("[H4X Hub] LOI: "   .. tostring(v131) );return;end end end end end local v132=false;pcall(function() local v264=899 -(503 + 396) ;local v265;while true do if (0==v264) then v265=game:GetService("UserInputService");v132=(v265.TouchEnabled==true) and (v265.KeyboardEnabled~=true) ;break;end end end);local v133="tu dong";local function v134() local v266=0;while true do if (v266==0) then if (v133=="tat") then return false;elseif (v133=="bat") then return true;end return v132~=true ;end end end local v135=Instance.new("ScreenGui");v135.Name="H4XDARLING009_Pill";v135.ResetOnSpawn=false;v135.DisplayOrder=1000180 -(92 + 89) ;v135.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;do local v267=0 -0 ;local v268;local v269;while true do if (v267==0) then v268=nil;pcall(function() if gethui then v268=gethui();else v268=game:GetService("CoreGui");end end);v267=1 + 0 ;end if (v267==(2 + 0)) then if  not v269 then v135.Parent=v10:WaitForChild("PlayerGui");end break;end if (v267==(3 -2)) then local v464=0 + 0 ;while true do if (v464==1) then v267=4 -2 ;break;end if (v464==(0 + 0)) then v269=false;if v268 then v269=pcall(function() v135.Parent=v268;end);end v464=1;end end end end end local v140=Instance.new("Frame");v140.Name="OpenPill";v140.Size=UDim2.new(0 + 0 ,320,0 -0 ,48);v140.Position=UDim2.new(0.5,0 + 0 ,0,28);v140.AnchorPoint=Vector2.new(0.5,0.5 -0 );v140.BackgroundColor3=Color3.fromRGB(10,1254 -(485 + 759) ,27 -15 );v140.BackgroundTransparency=0.12;v140.BorderSizePixel=1189 -(442 + 747) ;v140.Visible=false;v140.Parent=v135;local v150=Instance.new("UICorner");v150.CornerRadius=UDim.new(1136 -(832 + 303) ,946 -(88 + 858) );v150.Parent=v140;local v153=Instance.new("UIStroke");v153.Color=Color3.fromRGB(78 + 177 ,255,255);v153.Transparency=0.15 + 0 ;v153.Thickness=1.2 + 0 ;v153.Parent=v140;local v158=Instance.new("UIGradient");v158.Color=ColorSequence.new({ColorSequenceKeypoint.new(0 -0 ,Color3.fromRGB(87 -23 ,529 -328 ,865 -610 )),ColorSequenceKeypoint.new(1 + 0 ,Color3.fromRGB(451 -219 ,23 + 5 ,1735 -(641 + 839) ))});v158.Parent=v153;local v161=48;local v162=Instance.new("Frame");v162.Name="IconBox";v162.Size=UDim2.new(913 -(910 + 3) ,v161,1,0 -0 );v162.BackgroundTransparency=1685 -(1466 + 218) ;v162.BorderSizePixel=0;v162.ZIndex=3;v162.Parent=v140;local v169=Color3.fromRGB(118 + 137 ,105,1328 -(556 + 592) );local v170,v171=v161/2 ,9 + 15 ;local v172,v173,v174=9,810 -(329 + 479) ,5;local v175=Instance.new("Frame");v175.Name="MoveIcon";v175.Size=UDim2.new(855 -(174 + 680) ,0 -0 ,1 -0 ,0 + 0 );v175.BackgroundTransparency=740 -(396 + 343) ;v175.BorderSizePixel=0 + 0 ;v175.ZIndex=1481 -(29 + 1448) ;v175.Parent=v162;local function v182(v270,v271,v272,v273,v274) local v275=1389 -(135 + 1254) ;local v276;local v277;while true do if (3==v275) then v277=Instance.new("UICorner");v277.CornerRadius=UDim.new(0 -0 ,math.floor(v273/(9 -7) ));v277.Parent=v276;v275=3 + 1 ;end if ((1528 -(389 + 1138))==v275) then v276.Position=UDim2.new(574 -(102 + 472) ,v270,0 + 0 ,v271);v276.Rotation=v274;v276.BackgroundColor3=v169;v275=2 + 0 ;end if (v275==2) then v276.BorderSizePixel=0 + 0 ;v276.ZIndex=1549 -(320 + 1225) ;v276.Parent=v175;v275=3;end if (v275==(6 -2)) then return v276;end if (v275==(0 + 0)) then v276=Instance.new("Frame");v276.Size=UDim2.new(1464 -(157 + 1307) ,v272,1859 -(821 + 1038) ,v273);v276.AnchorPoint=Vector2.new(0.5 -0 ,0.5 + 0 );v275=1 -0 ;end end end v182(v170,v171,(v172 * (1 + 1)) + (4 -2) ,v173,0);v182(v170,v171,(v172 * (1028 -(834 + 192))) + 2 ,v173,90);for v278,v279 in ipairs({0 + 0 ,2 + 88 ,278 -98 ,73 + 197 }) do local v280=0;local v281;local v282;local v283;while true do if (v280==0) then v281=math.rad(v279);v282=v170 + (v172 * math.cos(v281)) ;v280=2 -1 ;end if (1==v280) then v283=v171 + (v172 * math.sin(v281)) ;for v504,v505 in ipairs({54 + 81 , -135}) do local v506=math.rad(v279 + v505 );local v507=v282 + ((v174/2) * math.cos(v506)) ;local v508=v283 + ((v174/(2 + 0)) * math.sin(v506)) ;v182(v507,v508,v174,v173,v279 + v505 );end break;end end end local v183=Instance.new("Frame");v183.Name="Split";v183.Size=UDim2.new(0 + 0 ,1 + 0 ,0,13 + 13 );v183.Position=UDim2.new(0 + 0 ,v161,1414.5 -(1001 + 413) ,0 -0 );v183.AnchorPoint=Vector2.new(882.5 -(244 + 638) ,0.5);v183.BackgroundColor3=Color3.fromRGB(948 -(627 + 66) ,759 -504 ,255);v183.BackgroundTransparency=602.78 -(512 + 90) ;v183.BorderSizePixel=0;v183.ZIndex=1909 -(1665 + 241) ;v183.Parent=v140;local v193=Instance.new("TextButton");v193.Name="Hit";v193.Size=UDim2.new(718 -(373 + 344) ,0 + 0 ,1,0 + 0 );v193.BackgroundTransparency=2 -1 ;v193.Text="H4XDARLING009 Hub";v193.TextColor3=Color3.fromRGB(431 -176 ,255,255);v193.Font=Enum.Font.GothamMedium;v193.TextSize=1117 -(35 + 1064) ;v193.AutoButtonColor=false;v193.ZIndex=2 + 0 ;v193.Parent=v140;local v205=Instance.new("UIPadding");v205.PaddingLeft=UDim.new(0 -0 ,v161 + 1 + 5 );v205.Parent=v193;local v208=true;local v209=nil;local v210=nil;local v211=true;local v212=false;local v213={};local v214=nil;local v215=nil;local v216=nil;local function v217() local v284=1236 -(298 + 938) ;local v285;while true do if (0==v284) then v285={};for v509,v510 in ipairs(v127()) do pcall(function() for v551,v552 in ipairs(v510:GetChildren()) do if (v552:IsA("ScreenGui") and (v552.Name=="WindUI")) then table.insert(v285,v552);end end end);end v284=1260 -(233 + 1026) ;end if (v284==1) then if ( #v285>0) then v213=v285;end return v213;end end end local function v218() local v286=1666 -(636 + 1030) ;while true do if (v286==(0 + 0)) then for v511,v512 in ipairs(v213) do local v513=0 + 0 ;local v514;while true do if (v513==0) then v514=false;pcall(function() v514=v512.Parent~=nil ;end);v513=1 + 0 ;end if (v513==(1 + 0)) then if v514 then return true;end break;end end end v217();v286=222 -(55 + 166) ;end if ((1 + 0)==v286) then for v515,v516 in ipairs(v213) do local v517=0 + 0 ;local v518;while true do if ((0 -0)==v517) then v518=false;pcall(function() v518=v516.Parent~=nil ;end);v517=298 -(36 + 261) ;end if ((1 -0)==v517) then if v518 then return true;end break;end end end return false;end end end local function v219() local v287=0;local v288;while true do if (v287==(1368 -(34 + 1334))) then local v475=0;while true do if (v475==(0 + 0)) then v288=v217();return v288[ #v288];end end end end end local function v220() local v289=0;while true do if (v289==(0 + 0)) then v217();for v519,v520 in ipairs(v213) do pcall(function() if (v520.Parent~=nil) then v520.Visible=false;end end);end break;end end end do local v290=1283 -(1035 + 248) ;while true do if (v290==(21 -(20 + 1))) then pcall(function() if v128 then local v553=0 + 0 ;while true do if (v553==1) then if (type(v128.Destroy)=="function") then v216=v128.Destroy;end break;end if (v553==0) then if (type(v128.Open)=="function") then v214=v128.Open;end if (type(v128.Close)=="function") then v215=v128.Close;end v553=1;end end end end);if  not v218() then v210=v219();end break;end end end local function v221() local v291=0;local v292;while true do local v358=319 -(134 + 185) ;while true do if (v358==0) then if (v291==1) then return v292==true ;end if (0==v291) then v292=false;pcall(function() v292=(v135.Parent~=nil) and (v140.Visible==true) ;end);v291=1;end break;end end end end local function v222(v293) pcall(function() if (v135.Parent~=nil) then v140.Visible=v293==true ;end end);end local function v223() local v294=1133 -(549 + 584) ;while true do if (v294==(688 -(314 + 371))) then task.spawn(function() task.wait();pcall(function() if (v135.Parent~=nil) then v135:Destroy();end end);task.wait();pcall(function() if (v16.Parent~=nil) then v16:Destroy();end end);task.wait();for v533,v534 in ipairs(v127()) do local v535=0;while true do if (v535==(0 -0)) then if  not v1 then pcall(function() local v629=0;local v630;while true do if ((968 -(478 + 490))==v629) then v630=v534:FindFirstChild("H4XDARLING009_PerfHud",true);if v630 then v630:Destroy();end break;end end end);end pcall(function() for v620,v621 in ipairs(v534:GetChildren()) do if (v621:IsA("ScreenGui") and (v621.Name=="WindUI") and (v621.Parent~=nil)) then v621:Destroy();end end end);break;end end end end);print("[H4X Hub] da tat hub");break;end if (1==v294) then pcall(function() if v209 then v209();end end);pcall(function() if v129 then v129();end end);v294=2 + 0 ;end if (v294==(1172 -(786 + 386))) then if  not v208 then return;end v208=false;v294=3 -2 ;end if (v294==(1381 -(1055 + 324))) then pcall(function() if (v216 and v128) then v216(v128);end end);v220();v294=3;end end end local v224=false;local function v225() if v212 then return;end v217();if ( #v213==0) then return;end v212=true;for v359,v360 in ipairs(v213) do pcall(function() v360.Destroyed:Connect(function() v223();end);end);end end local function v226(v295) local v296=1340 -(1093 + 247) ;local v297;local v298;while true do if (v296==2) then if  not v297 then local v536=0 + 0 ;while true do if (v536==(0 + 0)) then v217();for v611,v612 in ipairs(v213) do pcall(function() if (v612.Parent~=nil) then v612.Visible=v295;end end);end break;end end end v224=false;v211=v295;v222( not v295 and v134() );v296=3;end if (v296==3) then return true;end if (v296==(3 -2)) then v297=false;v298=false;if (v295 and (v214~=nil)) then v297=true;v298=pcall(v214,v128);elseif ( not v295 and (v215~=nil)) then local v571=0;while true do if (v571==(0 -0)) then v297=true;v298=pcall(v215,v128);break;end end end if (v297 and  not v298) then local v537=0;local v538;while true do if (v537==0) then v538=0 -0 ;while true do local v613=0 -0 ;while true do if (v613==(0 + 0)) then if ((3 -2)==v538) then return false;end if ((0 -0)==v538) then v224=false;v223();v538=1;end break;end end end break;end end end v296=2 + 0 ;end if (v296==(0 -0)) then if ( not v208 or v224) then return false;end if  not v218() then local v539=688 -(364 + 324) ;while true do if (v539==(0 -0)) then v223();return false;end end end v225();v224=true;v296=1;end end end v210=v219();v225();task.spawn(function() while v208 do task.wait(0.5 -0 );if  not v208 then break;end if  not v218() then v223();break;end end end);do local v299=false;local v300=false;local v301=nil;local v302=nil;v193.InputBegan:Connect(function(v361) local v362=0;while true do if (v362==1) then if ((v361.UserInputType==Enum.UserInputType.MouseButton1) or (v361.UserInputType==Enum.UserInputType.Touch)) then local v554=0 + 0 ;while true do if (v554==1) then v301=v361.Position;v302=v140.Position;v554=8 -6 ;end if (v554==0) then v299=true;v300=false;v554=1 -0 ;end if (v554==(5 -3)) then v361.Changed:Connect(function() if (v361.UserInputState==Enum.UserInputState.End) then v299=false;end end);break;end end end break;end if ((1268 -(1249 + 19))==v362) then if  not v208 then return;end if (v361.UserInputType==Enum.UserInputType.MouseButton2) then task.defer(v223);return;end v362=1 + 0 ;end end end);v193.InputChanged:Connect(function(v363) if  not v208 then return;end if (v299 and ((v363.UserInputType==Enum.UserInputType.MouseMovement) or (v363.UserInputType==Enum.UserInputType.Touch))) then local v477=v363.Position-v301 ;if ((math.abs(v477.X) + math.abs(v477.Y))>(23 -17)) then v300=true;end pcall(function() if (v135.Parent~=nil) then v140.Position=UDim2.new(v302.X.Scale,v302.X.Offset + v477.X ,v302.Y.Scale,v302.Y.Offset + v477.Y );end end);end end);v193.MouseButton1Click:Connect(function() local v364=1086 -(686 + 400) ;while true do if (0==v364) then if v300 then return;end v226(true);break;end end end);end if v128 then pcall(function() v128.Close=function() v226(false);end;v128.Open=function() v226(true);end;v128.Destroy=function() task.defer(v223);end;end);end do local v303,v304=pcall(function() return game:GetService("UserInputService");end);if ( not v303 or  not v304) then warn("[H4X Hub] Khong lay duoc UserInputService -> phim tat menu khong chay");return;end local v305={};for v365,v366 in ipairs(v0) do v305[v366]=true;end local v306={[Enum.UserInputType.MouseButton1]=true,[Enum.UserInputType.MouseButton2]=true,[Enum.UserInputType.Touch]=true};local v307=nil;local v308=false;local v309=0;local v310=0;local v311=false;local v312,v313;local function v314() local v368=0 + 0 ;local v369;local v370;while true do if ((229 -(73 + 156))==v368) then v369,v370=pcall(function() return v304:GetFocusedTextBox();end);return v369 and (v370~=nil) ;end end end local function v315(v371) local v372=0 + 0 ;local v373;while true do if (v372==0) then v373=0;while true do if (v373==1) then v307=nil;v308=false;v373=813 -(721 + 90) ;end if (v373==0) then pcall(function() if v312 then local v622=0;while true do if (v622==0) then v312:Disconnect();v312=nil;break;end end end end);pcall(function() if v313 then local v623=0;while true do if (v623==(0 + 0)) then v313:Disconnect();v313=nil;break;end end end end);v373=3 -2 ;end if (v373==(472 -(224 + 246))) then if v371 then local v616=0;while true do if ((0 -0)==v616) then warn("[H4X Hub] phim tat da tat: "   .. tostring(v371) );v3("H4X Hub","Da tat phim tat ("   .. tostring(v371)   .. "). Menu van mo/thu duoc bang thanh pill." ,10 -4 );break;end end end break;end end break;end end end local function v316() local v374=0 + 0 ;local v375;while true do if (v374==(1 + 0)) then v226(v375);break;end if (v374==(0 + 0)) then if ( not v208 or v311) then return;end v375= not v211 or v221() ;v374=1;end end end local function v317(v376) local v377=0 -0 ;local v378;local v379;while true do if (v377==(12 -8)) then if (v309>=2) then v315("loi phim tat -> da tu tat de bao ve game");end break;end if (v377==(514 -(203 + 310))) then v311=true;v378,v379=pcall(v376);v377=2;end if (v377==(1996 -(1238 + 755))) then v309=v309 + 1 ;warn("[H4X Hub] phim tat loi lan "   .. v309   .. ": "   .. tostring(v379) );v377=4;end if (0==v377) then if  not v208 then return;end if  not v218() then v223();return;end v377=1 + 0 ;end if (v377==2) then v311=false;if v378 then v309=1534 -(709 + 825) ;return;end v377=3;end end end v312=v304.InputBegan:Connect(function(v380) if  not v208 then return;end if ((v380.UserInputType~=Enum.UserInputType.Keyboard) and  not v306[v380.UserInputType]) then return;end if ((os.clock() -v310)<0.12) then return;end if v305[v380.KeyCode] then local v478=0 -0 ;while true do local v521=0 -0 ;while true do if (v521==(865 -(196 + 668))) then if (v478==(3 -2)) then v308=true;v310=os.clock();v478=3 -1 ;end break;end if (v521==0) then if (v478==0) then if (v307 or v314()) then return;end v307=v380.KeyCode;v478=1;end if (v478==2) then v317(v316);return;end v521=834 -(171 + 662) ;end end end end if (v307 and v308) then local v479=93 -(4 + 89) ;local v480;while true do if (v479==0) then v480=(v380.UserInputType==Enum.UserInputType.Keyboard) or v306[v380.UserInputType] ;if v480 then v308=false;v310=os.clock();v317(v316);end break;end end end end);v313=v304.InputEnded:Connect(function(v381) if (v208 and v307 and (v381.KeyCode==v307)) then v307=nil;v308=false;end end);function v209() v315(nil);end print("[H4X Hub] phim tat menu: Left Ctrl (mo/thu) -- san sang cho phat khac trong MENU_TOGGLE_KEYS");end v3("H4XDARLING009 Hub","v3.67",13 -9 );print("[H4X Hub] v3.67");
--- ⚠️ WARNING: integrity protected!
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+]]
 
-]]--
+    HomeTab:Button({
+        Title = "💰 Bảng giá cày thuê",
+        Desc = "Xem toàn bộ giá bằng chữ (bấm 📋 Copy để copy)",
+        Callback = function()
+            ShowInfo("Bảng giá cày thuê", PRICE_TEXT)
+        end
+    })
+end, function(e)
+    return e
+end)
+
+if not buildOk then
+    -- Dọn cửa sổ WindUI bị dở (nếu có) để khỏi treo cái khung đen
+    pcall(function()
+        for _, root in ipairs(collectRoots()) do
+            for _, sg in ipairs(root:GetChildren()) do
+                if sg:IsA("ScreenGui") and sg.Name == "WindUI" then
+                    sg:Destroy()
+                end
+            end
+        end
+    end)
+    notify("Hub bị lỗi", "Chụp dòng này gửi t: " .. tostring(buildErr):sub(1, 140), 15)
+    warn("[H4X Hub] LOI: " .. tostring(buildErr))
+    return
+end
+
+-- Mọi thứ ok: nút — hoặc X ẩn menu -> hiện THANH NHỎ bo góc trên cùng, bấm thanh đó mở lại menu
+-- (WindUI trên PC ko tự hiện nút mở lại, nên tự tạo thanh pill.
+--  CÒN trên MOBI/màn hình cảm ứng, WindUI TỰ hiện pill gốc của nó rồi -> nếu vẽ
+--  pill của mình thêm nữa là thành 2 cái trùng nhau (như ảnh Evade). Vì vậy máy
+--  cảm ứng = ko vẽ pill riêng, dùng pill gốc của WindUI.)
+local isTouchDevice = false
+pcall(function()
+    local UIS = game:GetService("UserInputService")
+    isTouchDevice = (UIS.TouchEnabled == true) and (UIS.KeyboardEnabled ~= true)
+end)
+
+-- Do tay neu khong muon dung "tu dong":
+--   "tu dong" = PC ve pill rieng, mobi KO ve  (mack dinh -> mobi con 1 thanh)
+--   "bat"     = luc nao cung ve pill rieng    (mobi se thay 2 thanh trung nhau)
+--   "tat"     = khong ve pill rieng bao gio   (PC phai mo lai bang Left Ctrl)
+local CUSTOM_PILL_MODE = "tu dong"
+
+local function pillShouldShow()
+    if CUSTOM_PILL_MODE == "tat" then
+        return false
+    elseif CUSTOM_PILL_MODE == "bat" then
+        return true
+    end
+    return (isTouchDevice ~= true)
+end
+
+local PillGui = Instance.new("ScreenGui")
+PillGui.Name = "H4XDARLING009_Pill"
+PillGui.ResetOnSpawn = false
+PillGui.DisplayOrder = 999999
+PillGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+do
+    local guiParent = nil
+    pcall(function()
+        if gethui then
+            guiParent = gethui()
+        else
+            guiParent = game:GetService("CoreGui")
+        end
+    end)
+    local parented = false
+    if guiParent then
+        parented = pcall(function()
+            PillGui.Parent = guiParent
+        end)
+    end
+    if not parented then
+        PillGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+    end
+end
+
+local Pill = Instance.new("Frame")
+Pill.Name = "OpenPill"
+Pill.Size = UDim2.new(0, 320, 0, 48)
+Pill.Position = UDim2.new(0.5, 0, 0, 28)
+Pill.AnchorPoint = Vector2.new(0.5, 0.5)
+Pill.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
+Pill.BackgroundTransparency = 0.12
+Pill.BorderSizePixel = 0
+Pill.Visible = false
+Pill.Parent = PillGui
+
+-- bo tròn hết cỡ giống nút gốc của WindUI
+local PillCorner = Instance.new("UICorner")
+PillCorner.CornerRadius = UDim.new(1, 0)
+PillCorner.Parent = Pill
+
+-- viền mảnh có gradient xanh -> hồng giống nút gốc
+local PillStroke = Instance.new("UIStroke")
+PillStroke.Color = Color3.fromRGB(255, 255, 255)
+PillStroke.Transparency = 0.15
+PillStroke.Thickness = 1.2
+PillStroke.Parent = Pill
+local StrokeGrad = Instance.new("UIGradient")
+StrokeGrad.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(64, 201, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(232, 28, 255)),
+})
+StrokeGrad.Parent = PillStroke
+
+-- ô vuông bên TRÁI có icon 4 mũi tên + vạch chia, y hệt pill gốc trên mobi
+local PILL_ICON_W = 48
+local PillIconBox = Instance.new("Frame")
+PillIconBox.Name = "IconBox"
+PillIconBox.Size = UDim2.new(0, PILL_ICON_W, 1, 0)
+PillIconBox.BackgroundTransparency = 1
+PillIconBox.BorderSizePixel = 0
+PillIconBox.ZIndex = 3
+PillIconBox.Parent = Pill
+
+-- Icon 4 mui ten: VIET BANG HINH (khong dung ky tu ✥ nua -> font Roblox khong co,
+-- hien thanh o vuong nhu ban PC vua chup). Gom 2 canh chu thap + 4 dau mui.
+local PINK_ICON = Color3.fromRGB(255, 105, 180)
+local iconCx, iconCy = PILL_ICON_W / 2, 24 -- tam o icon (pill cao 48)
+local iconR, iconT, iconArm = 9, 2, 5
+
+local PillIcon = Instance.new("Frame")
+PillIcon.Name = "MoveIcon"
+PillIcon.Size = UDim2.new(1, 0, 1, 0)
+PillIcon.BackgroundTransparency = 1
+PillIcon.BorderSizePixel = 0
+PillIcon.ZIndex = 4
+PillIcon.Parent = PillIconBox
+
+local function iconBar(px, py, len, thick, rot)
+    local f = Instance.new("Frame")
+    f.Size = UDim2.new(0, len, 0, thick)
+    f.AnchorPoint = Vector2.new(0.5, 0.5)
+    f.Position = UDim2.new(0, px, 0, py)
+    f.Rotation = rot
+    f.BackgroundColor3 = PINK_ICON
+    f.BorderSizePixel = 0
+    f.ZIndex = 4
+    f.Parent = PillIcon
+    local c = Instance.new("UICorner")
+    c.CornerRadius = UDim.new(0, math.floor(thick / 2))
+    c.Parent = f
+    return f
+end
+
+-- 2 canh chu thap
+iconBar(iconCx, iconCy, iconR * 2 + 2, iconT, 0) -- ngang
+iconBar(iconCx, iconCy, iconR * 2 + 2, iconT, 90) -- doc
+
+-- 4 dau mui (moi dau = 2 nanh 45 do)
+for _, dir in ipairs({ 0, 90, 180, 270 }) do
+    local rad = math.rad(dir)
+    local tx = iconCx + iconR * math.cos(rad)
+    local ty = iconCy + iconR * math.sin(rad)
+    for _, off in ipairs({ 135, -135 }) do
+        local a = math.rad(dir + off)
+        -- diem neo = dau nanh, tinh tam frame roi doi ra (AnchorPoint 0.5)
+        local ax = tx + (iconArm / 2) * math.cos(a)
+        local ay = ty + (iconArm / 2) * math.sin(a)
+        iconBar(ax, ay, iconArm, iconT, dir + off)
+    end
+end
+
+local PillSplit = Instance.new("Frame")
+PillSplit.Name = "Split"
+PillSplit.Size = UDim2.new(0, 1, 0, 26)
+PillSplit.Position = UDim2.new(0, PILL_ICON_W, 0.5, 0)
+PillSplit.AnchorPoint = Vector2.new(0.5, 0.5)
+PillSplit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PillSplit.BackgroundTransparency = 0.78
+PillSplit.BorderSizePixel = 0
+PillSplit.ZIndex = 3
+PillSplit.Parent = Pill
+
+-- nút bấm trong suốt phủ kín pill (bấm mở menu + kéo thả)
+local PillBtn = Instance.new("TextButton")
+PillBtn.Name = "Hit"
+PillBtn.Size = UDim2.new(1, 0, 1, 0)
+PillBtn.BackgroundTransparency = 1
+PillBtn.Text = "H4XDARLING009 Hub"
+PillBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+PillBtn.Font = Enum.Font.GothamMedium
+PillBtn.TextSize = 18
+PillBtn.AutoButtonColor = false
+PillBtn.ZIndex = 2
+PillBtn.Parent = Pill
+
+-- det chu sang ben phai o icon (de giong pill goc: icon | ten)
+local PillPad = Instance.new("UIPadding")
+PillPad.PaddingLeft = UDim.new(0, PILL_ICON_W + 6)
+PillPad.Parent = PillBtn
+
+--==============================================================
+-- 🛡️ hubAlive + GUI WindUI
+-- Loi cu "bam Ctrl sau khi tat hub -> dong Roblox" den tu 2 chuyen:
+--   (1) goi WindWindow:Open()/Close() luc GUI da bi Destroy;
+--   (2) ta TU Destroy ScreenGui cua WindUI ma khong cho WindUI cat cac ket noi
+--       noi bo cua no (kéo window, phim, tween) -> WindUI van chay tiep tren
+--       do da chet, bam phim la noi chien day chuyen.
+-- Cach nay:
+--   - nut — / pill van goi Open/Close GOC cua WindUI (dung hieu ung + pill cua no),
+--     nhung chi goi khi hubAlive = true;
+--   - khi tat hub thi goi Destroy GOC cua WindUI TRUOC de tu no don minh,
+--     ta chi don pill + cua so code cua ta;
+--   - ngay sau khi GUI bi xoa thi hubAlive = false va phim tat bi cat ket noi,
+--     nen Ctrl khong con duong nao goi vao WindUI nua.
+--==============================================================
+local hubAlive = true
+local onHubShutdown = nil -- chỗ này cho block phím tat gan vao de cat ket noi
+local windGui = nil
+local menuOpen = true -- WindUI mo cửa sổ ngay khi CreateWindow
+local windGuiWatched = false
+local windGuis = {} -- moi ScreenGui "WindUI" tim thay (WindUI tao nhieu hon 1 cai)
+
+local origOpen = nil
+local origClose = nil
+local origDestroy = nil
+
+local function scanWindGuis()
+    local list = {}
+    for _, root in ipairs(collectRoots()) do
+        pcall(function()
+            for _, sg in ipairs(root:GetChildren()) do
+                if sg:IsA("ScreenGui") and sg.Name == "WindUI" then
+                    table.insert(list, sg)
+                end
+            end
+        end)
+    end
+    if #list > 0 then
+        windGuis = list
+    end
+    return windGuis
+end
+
+-- Co con ScreenGui WindUI nao song khong? (khong dung .Visible cua 1 cai de
+-- doan, vi WindUI co the co nhieu ScreenGui cung ten)
+local function windGuiAlive()
+    for _, sg in ipairs(windGuis) do
+        local live = false
+        pcall(function()
+            live = (sg.Parent ~= nil)
+        end)
+        if live then
+            return true
+        end
+    end
+    scanWindGuis()
+    for _, sg in ipairs(windGuis) do
+        local live = false
+        pcall(function()
+            live = (sg.Parent ~= nil)
+        end)
+        if live then
+            return true
+        end
+    end
+    return false
+end
+
+local function findWindGui()
+    local list = scanWindGuis()
+    return list[#list]
+end
+
+-- An toan bo GUI WindUI con song (dung khi tat hub, khong cho no loe ra nua)
+local function hideWindGui()
+    scanWindGuis()
+    for _, sg in ipairs(windGuis) do
+        pcall(function()
+            if sg.Parent ~= nil then
+                sg.Visible = false
+            end
+        end)
+    end
+end
+
+-- Lay ham GOC cua WindUI TRUOC khi bi ghi de (phai lay o day, duoi nua la
+-- ham cua hub roi goi lai se de quy)
+do
+    pcall(function()
+        if WindWindow then
+            if type(WindWindow.Open) == "function" then
+                origOpen = WindWindow.Open
+            end
+            if type(WindWindow.Close) == "function" then
+                origClose = WindWindow.Close
+            end
+            if type(WindWindow.Destroy) == "function" then
+                origDestroy = WindWindow.Destroy
+            end
+        end
+    end)
+    if not windGuiAlive() then
+        windGui = findWindGui()
+    end
+end
+
+local function isPillVisible()
+    local vis = false
+    pcall(function()
+        vis = (PillGui.Parent ~= nil) and (Pill.Visible == true)
+    end)
+    return vis == true
+end
+
+local function setPillShown(show)
+    pcall(function()
+        if PillGui.Parent ~= nil then
+            Pill.Visible = (show == true)
+        end
+    end)
+end
+
+--==============================================================
+-- ❌ TẮT HẲN HUB (X / chuột phải pill / GUI WindUI bi xoa)
+-- Don theo tung buoc, moi buoc cach 1 frame, AN MENU TRUOC ROI MOI XOA
+-- -> khong xoa GUI giua luc WindUI dang ve (do la 1 cach gay vung game).
+--==============================================================
+local function shutdownHub()
+    if not hubAlive then
+        return
+    end
+    hubAlive = false
+
+    -- 1) ngat ket noi phim tat DAU TIEN tien (kha nang gay loi lon nhat)
+    pcall(function()
+        if onHubShutdown then
+            onHubShutdown()
+        end
+    end)
+    -- 2) lưu ý ve do hoa (KEEP_PERF_ON_CLOSE = true thi khong lam gi)
+    pcall(function()
+        if cleanUpPerf then
+            cleanUpPerf()
+        end
+    end)
+    -- 3) cho WindUI TU don cua no (cat ket noi keo cua / tween / phim cua no).
+    --    Day la buoc quyet dinh: truoc day ta xoa thang ScreenGui cua WindUI ->
+    --    code noi bo cua van con chay tren do da chet -> bam Ctrl la vung game.
+    pcall(function()
+        if origDestroy and WindWindow then
+            origDestroy(WindWindow)
+        end
+    end)
+    -- 4) an het GUI WindUI con sot lai (phong hien tuong xoa khong het)
+    hideWindGui()
+
+    -- 5) don cua cua minh theo tung buoc, cach nhau 1 frame
+    task.spawn(function()
+        task.wait()
+        pcall(function()
+            if PillGui.Parent ~= nil then
+                PillGui:Destroy()
+            end
+        end)
+        task.wait()
+        pcall(function()
+            if ViewerGui.Parent ~= nil then
+                ViewerGui:Destroy()
+            end
+        end)
+        task.wait()
+        for _, root in ipairs(collectRoots()) do
+            if not KEEP_PERF_ON_CLOSE then
+                pcall(function()
+                    local hud = root:FindFirstChild("H4XDARLING009_PerfHud", true)
+                    if hud then
+                        hud:Destroy()
+                    end
+                end)
+            end
+            -- chi xoa khi WindUI chua tu xoa (origDestroy o buoc 3 thuong da xoa roi)
+            pcall(function()
+                for _, sg in ipairs(root:GetChildren()) do
+                    if sg:IsA("ScreenGui") and sg.Name == "WindUI" and sg.Parent ~= nil then
+                        sg:Destroy()
+                    end
+                end
+            end)
+        end
+    end)
+    -- (khong pop-up thong bao o day nua -> chi in ra executor cho de debug)
+    print("[H4X Hub] da tat hub")
+end
+
+--==============================================================
+-- 🪟 AN / MO MENU
+-- Goi Open/Close GOC cua WindUI -> menu thu vao pill cua chinh no, dung hieu
+-- ung. (Ban truoc do ta chi flip .Visible cua 1 ScreenGui ten "WindUI", nhung
+-- WindUI tao NHIEU ScreenGui cung ten -> an nham cai khong phai cua so: bam —
+-- thi menu van nguyen + mo thanh pill cua hub ra thanh 2 lop nhu ban chup.)
+-- Van an toan chet game: chi goi khi hubAlive = true VA con ScreenGui WindUI
+-- song; WindUI ma loi dong/mo thi ta tat hub luon, khong thu lan 2.
+--==============================================================
+local applyingMenu = false
+
+-- Gan theo doi Destroy cho TAT CA ScreenGui "WindUI": WindUI tu xoa GUI bang
+-- duong nao khong qua nut X cua hub thi hubAlive bi dat false lap tuc, phim tat
+-- / pill khong con cham vao do da chet nua.
+local function watchWindGuis()
+    if windGuiWatched then
+        return
+    end
+    scanWindGuis()
+    if #windGuis == 0 then
+        return
+    end
+    windGuiWatched = true
+    for _, sg in ipairs(windGuis) do
+        pcall(function()
+            sg.Destroyed:Connect(function()
+                shutdownHub()
+            end)
+        end)
+    end
+end
+
+local function setMenuShown(show)
+    if not hubAlive or applyingMenu then
+        return false
+    end
+    if not windGuiAlive() then
+        -- khong con GUI WindUI = hub da tat that -> tat phim tat, dung tai day
+        shutdownHub()
+        return false
+    end
+    watchWindGuis()
+
+    applyingMenu = true
+    local didCall = false
+    local okCall = false
+    if show and origOpen ~= nil then
+        didCall = true
+        okCall = pcall(origOpen, WindWindow)
+    elseif (not show) and origClose ~= nil then
+        didCall = true
+        okCall = pcall(origClose, WindWindow)
+    end
+    if didCall and not okCall then
+        -- WindUI loi khi dong/mo cua = no khong con on -> tat hub bao ve game
+        applyingMenu = false
+        shutdownHub()
+        return false
+    end
+    if not didCall then
+        -- WindUI ban khong co Open/Close -> phong su: chi an/hien ScreenGui
+        scanWindGuis()
+        for _, sg in ipairs(windGuis) do
+            pcall(function()
+                if sg.Parent ~= nil then
+                    sg.Visible = show
+                end
+            end)
+        end
+    end
+    applyingMenu = false
+    menuOpen = show
+    -- pill cua hub chi hien khi menu da thu (mobi: WindUI tu co pill cua no)
+    setPillShown((not show) and pillShouldShow())
+    return true
+end
+
+windGui = findWindGui()
+watchWindGuis()
+
+-- Vong do sat: 0.5s check 1 lan. Moi ScreenGui WindUI deu mat ma hubAlive con
+-- true (WindUI tu xoa GUI luc script chua kip gan theo doi) -> tat hub luon,
+-- de phim tat khong bao gio con goi vao do da chet.
+task.spawn(function()
+    while hubAlive do
+        task.wait(0.5)
+        if not hubAlive then
+            break
+        end
+        if not windGuiAlive() then
+            shutdownHub()
+            break
+        end
+    end
+end)
+
+--==============================================================
+-- 👆 PILL: bấm trái mở lại menu + kéo thả (kéo ra chỗ khác cho đỡ vướng)
+--==============================================================
+do
+    local dragging = false
+    local dragMoved = false
+    local dragStart = nil
+    local startPos = nil
+
+    PillBtn.InputBegan:Connect(function(input)
+        if not hubAlive then
+            return
+        end
+        if input.UserInputType == Enum.UserInputType.MouseButton2 then
+            -- de sang frame sau moi xoa: Destroy giua luc chinh no dang phat
+            -- su kien InputBegan la 1 cach gay loi day chuyen
+            task.defer(shutdownHub)
+            return
+        end
+        if input.UserInputType == Enum.UserInputType.MouseButton1
+            or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragMoved = false
+            dragStart = input.Position
+            startPos = Pill.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    PillBtn.InputChanged:Connect(function(input)
+        if not hubAlive then
+            return
+        end
+        if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement
+            or input.UserInputType == Enum.UserInputType.Touch) then
+            local delta = input.Position - dragStart
+            if math.abs(delta.X) + math.abs(delta.Y) > 6 then
+                dragMoved = true -- đã kéo, lần thả này ko tính là bấm
+            end
+            pcall(function()
+                if PillGui.Parent ~= nil then
+                    Pill.Position = UDim2.new(
+                        startPos.X.Scale, startPos.X.Offset + delta.X,
+                        startPos.Y.Scale, startPos.Y.Offset + delta.Y
+                    )
+                end
+            end)
+        end
+    end)
+
+    PillBtn.MouseButton1Click:Connect(function()
+        if dragMoved then
+            return
+        end
+        setMenuShown(true)
+    end)
+end
+
+--==============================================================
+-- Ghi đè Open/Close/Destroy của WindUI de dong bo thanh pill cua hub.
+-- Ca 3 deu di qua setMenuShown / shutdownHub, la 2 cho duy nhat duoc phep
+-- cham vao ham goc cua WindUI (va ca 2 deu kiem tra hubAlive + GUI con song).
+-- Nho vay: bam — = WindUI tu thu menu vao pill cua no (dung hieu ung),
+-- bam X = WindUI tu don no truoc, roi hub moi don cua hub.
+--==============================================================
+if WindWindow then
+    pcall(function()
+        WindWindow.Close = function()
+            setMenuShown(false)
+        end
+        WindWindow.Open = function()
+            setMenuShown(true)
+        end
+        WindWindow.Destroy = function()
+            -- tat han hub: shutdownHub goi origDestroy cua WindUI truoc khi don
+            task.defer(shutdownHub)
+        end
+    end)
+end
+
+--==============================================================
+-- ⌨️ PHIM TAT MO/TAT MENU (mặc định Left Ctrl, đổi ở MENU_TOGGLE_KEYS)
+-- Bam Ctrl la mo/thu LIEN TUC. Neu giu Ctrl roi bam them phim khac
+-- (Ctrl+C/V/X/Z/A) thi no tu hoan lai 1 lan, nen copy/paste khong lam mo menu.
+-- Dang go trong TextBox (chat Roblox, o tim cua hub) thi bo qua.
+-- #3 LOP BAO VE MOI:
+--   • toan bo than handler nam trong pcall -> loi thi game khong chet.
+--   • loi 2 lan -> tu cat han phim tat (hub bao 1 lan, menu van dung duoc
+--     bang thanh pill / nut —).
+--   • moi lan bam deu kiem tra GUI WindUI + Pill con ton tai khong.
+--==============================================================
+do
+    local okUIS, UserInputService = pcall(function()
+        return game:GetService("UserInputService")
+    end)
+    if not okUIS or not UserInputService then
+        warn("[H4X Hub] Khong lay duoc UserInputService -> phim tat menu khong chay")
+        return
+    end
+
+    local keySet = {}
+    for _, k in ipairs(MENU_TOGGLE_KEYS) do
+        keySet[k] = true
+    end
+    local CLICK_TYPES = {
+        [Enum.UserInputType.MouseButton1] = true,
+        [Enum.UserInputType.MouseButton2] = true,
+        [Enum.UserInputType.Touch] = true,
+    }
+
+    local heldKey = nil -- dang giu phim tat
+    local canRevert = false -- van con co the hoan lai lan bam vua roi
+    local hotkeyErrors = 0
+    local lastToggleAt = 0
+    local toggling = false -- chong de quy / chong bam lien tuc
+
+    local connBegan, connEnded
+
+    local function isTyping()
+        local ok, box = pcall(function()
+            return UserInputService:GetFocusedTextBox()
+        end)
+        return (ok and box ~= nil)
+    end
+
+    -- Cat ket noi phim tat. KHONG dat hubAlive = false o day: khi loi phim tat
+    -- thi hub van song (nut — , X, thanh pill van dung duoc). Khi tat hub thi
+    -- shutdownHub da tu dat hubAlive = false truoc khi goi ham nay.
+    local function killHotkeys(reason)
+        pcall(function()
+            if connBegan then
+                connBegan:Disconnect()
+                connBegan = nil
+            end
+        end)
+        pcall(function()
+            if connEnded then
+                connEnded:Disconnect()
+                connEnded = nil
+            end
+        end)
+        heldKey = nil
+        canRevert = false
+        if reason then
+            warn("[H4X Hub] phim tat da tat: " .. tostring(reason))
+            notify("H4X Hub", "Da tat phim tat (" .. tostring(reason)
+                .. "). Menu van mo/thu duoc bang thanh pill.", 6)
+        end
+    end
+
+    local function toggleMenu()
+        if not hubAlive or toggling then
+            return
+        end
+        -- thu menu = menu dang mo VA thanh pill dang an
+        local shouldOpen = (not menuOpen) or isPillVisible()
+        -- setMenuShown chi cham vao .Visible cua ScreenGui that;
+        -- GUI mat thi tu shutdownHub + cat phim tat -> khong the gay chet game
+        setMenuShown(shouldOpen)
+    end
+
+    local function runGuarded(fn)
+        if not hubAlive then
+            return
+        end
+        -- khong con ScreenGui WindUI nao song = hub da tat: tat phim tat,
+        -- khong goi bat cu thu gi nua (day la duong gay chet Roblox cu)
+        if not windGuiAlive() then
+            shutdownHub()
+            return
+        end
+        toggling = true
+        local ok, err = pcall(fn)
+        toggling = false
+        if ok then
+            hotkeyErrors = 0 -- chay xong ngon lanh -> tinh lai tu dau
+            return
+        end
+        hotkeyErrors = hotkeyErrors + 1
+        warn("[H4X Hub] phim tat loi lan " .. hotkeyErrors .. ": " .. tostring(err))
+        if hotkeyErrors >= 2 then
+            -- loi 2 lan = khong cho bam phim tat nua (chi cat ket noi phim,
+            -- GIU menu chay tiep) -> game khong the bi vung/đóng vi no
+            killHotkeys("loi phim tat -> da tu tat de bao ve game")
+        end
+    end
+
+    connBegan = UserInputService.InputBegan:Connect(function(input)
+        if not hubAlive then
+            return
+        end
+        if input.UserInputType ~= Enum.UserInputType.Keyboard
+            and not CLICK_TYPES[input.UserInputType] then
+            return
+        end
+        -- chong bam lien tuc gay de quy
+        if os.clock() - lastToggleAt < 0.12 then
+            return
+        end
+
+        if keySet[input.KeyCode] then
+            if heldKey or isTyping() then
+                return
+            end
+            heldKey = input.KeyCode
+            canRevert = true
+            lastToggleAt = os.clock()
+            runGuarded(toggleMenu)
+            return
+        end
+
+        -- giu Ctrl + bam thu khac (C, V, X, Z, A, click...) -> hoan lai lan bam Ctrl
+        if heldKey and canRevert then
+            local isOtherKey = (input.UserInputType == Enum.UserInputType.Keyboard)
+                or CLICK_TYPES[input.UserInputType]
+            if isOtherKey then
+                canRevert = false
+                lastToggleAt = os.clock()
+                runGuarded(toggleMenu) -- bam lai 1 lan nua = ve dung trang thai cu
+            end
+        end
+    end)
+
+    connEnded = UserInputService.InputEnded:Connect(function(input)
+        if hubAlive and heldKey and input.KeyCode == heldKey then
+            heldKey = nil
+            canRevert = false
+        end
+    end)
+
+    -- shutdownHub() goi cai nay: ngat ket noi ngay khi tat hub
+    onHubShutdown = function()
+        killHotkeys(nil)
+    end
+
+    print("[H4X Hub] phim tat menu: Left Ctrl (mo/thu) -- san sang cho phat khac trong MENU_TOGGLE_KEYS")
+    -- (bo pop-up "Phim tat: Left Ctrl" -> khong xuong thong bao nua)
+end
+
+-- Mọi thứ ok: báo phiên bản
+notify("H4XDARLING009 Hub", "v3.67", 4)
+print("[H4X Hub] v3.67")
