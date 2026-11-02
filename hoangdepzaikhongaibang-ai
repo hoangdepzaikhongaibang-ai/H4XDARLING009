@@ -157,7 +157,7 @@ if type(loadstring) ~= "function" and type(load) ~= "function" then
 end
 
 -- Dung loadstring cua executor, neu executor chi co `load` thi dung `load`
-local RUNCHUNK = (type(loadstring) == "function") and loadstring or load
+local RUNCHUNK = (type(loadstring) == "function") and loadstring or loads
 
 -- ==================== TẢI WINDUI ====================
 -- 3 link nguồn, cai nao tai duoc thi dung cai do (mang VN hay bi chan link
