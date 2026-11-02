@@ -1,67 +1,3 @@
---==============================================================
--- H4XDARLING009 Hub v3.0 (ĐÃ SỬA - GIỮ NGUYÊN MENU WINDUI)
--- 1. Menu giữ nguyên y hệt bản gốc (WindUI, sidebar)
--- 2. Bấm tên script -> cửa sổ HIỆN LUÔN CODE bên trong script đó
---    (có nút ▶ Chạy và 📋 Copy)
--- 3. Cửa sổ xem code tự tạo chạy TRƯỚC -> dù menu WindUI lỗi vẫn có
---    thông báo lỗi cụ thể trên màn hình
--- 4. TRANG CHỦ có nút Discord / TikTok — bấm là copy link
---    (Roblox ko tự mở trang web được -> copy rồi dán vào trình duyệt)
--- 5. TRANG CHỦ có BẢNG GIÁ CÀY THUÊ bằng chữ (nút 📋 Copy)
--- 6. Ấn nút — trên menu -> menu thu nhỏ thành thanh nhỏ trên cùng,
---    bấm thanh đó mở lại menu (ĐÃ BỎ nút tròn hồng).
---    PC = thanh pill mình tự vẽ, giờ bo giống hệt pill gốc trên mobi
---    (nền đen đậm, viền gradient xanh->tím, ô icon ✥ màu hồng bên trái + vạch chia).
---    MOBI = WindUI tự sinh thanh của nó rồi -> hub KHÔNG vẽ pill nữa,
---    hết bị 2 thanh trùng nhau. Đổi tay: CUSTOM_PILL_MODE ở dưới.
--- 7. TAB "Tăng fps" — đứng THỨ 2 trên sidebar (ngay sau Trang chủ):
---    Section "Optimization & Boost" + nut "Boost FPS (Remove Textures)":
---    QualityLevel = Level01, moi part -> Material Plastic + Reflectance 0,
---    moi Decal/Texture -> Transparency 1 (an hoa van/logo/hinh in quan ao).
---    Co the TU XU LY part sinh sau (doi dao/zone map moi) - xem
---    TU_XU_LY_PART_MOI o khoi "Tăng fps".
---    + 📊 dong ho FPS do that + nut ↩ Trả lại cài đặt gốc.
---    MOI THUOC TINH DOI DI DUOC LUU LAI -> bam [↩] hoac [R] la ve dung nhu cu,
---    khong Destroy object nao (ko mat Sky/bau troi, chi an hinh in tren quan ao).
---    Ko đụng tới speed / jump / camera / ESP / bất cứ thứ gì ảnh hưởng
---    người chơi khác -> chạy game nào cũng được, ko bị report.
--- 8. PHIM TAT: bam Left Ctrl = mo menu, bam lan nua = thu menu thanh pill
---    (bam vao thanh pill do cung mo lai duoc). Bam la mo/thu LIEN TUC,
---    khong phai cho tha tay. Neu luc giu Ctrl ma bam them phim/chuot khac
---    (Ctrl+C, Ctrl+V, Ctrl+X...) thi no tu hoan lai, nen ko pha copy/paste.
---    Doi phim: sua bang MENU_TOGGLE_KEYS ben duoi.
--- 9. DA SUA HAN LOI "tat hub roi bam Ctrl -> Roblox bi dong/ung":
---    Nguyen nhan: ta TU Destroy ScreenGui cua WindUI ma khong cho WindUI cat
---    cac ket noi noi bo cua no (keo cua, phim, tween) -> WindUI van chay tiep
---    tren do da chet, bam Ctrl la noi chien day chuyen lam vung ca game.
---    Cach nay: an X / chuot phai pill -> goi ham DON GOC cua WindUI truoc de
---    tu no don minh, xong hub moi don pill + cua so code cua no.
---    Nut — va thanh pill van goi Close/Open GOC cua WindUI (menu thu dung
---    hieu ung, khong con ki an nham cai ScreenGui khong phai cua so nhu ban
---    truoc), nhung chi duoc goi khi hubAlive = true VA con ScreenGui "WindUI"
---    song -> GUI chet thi phim tat bi cat ket noi ngay.
---    Them 3 lop bao ve nua:
---      • moi lan bam deu nam trong pcall; loi 2 lan = tu cat han phim tat
---        (menu van mo/thu duoc bang thanh pill, game khong chet nua).
---      • vong do sat 0.5s: moi ScreenGui "WindUI" deu mat = hub tu tat.
---      • don GUI khi tat hub lam theo tung buoc cach nhau 1 frame.
---    Tat hub (X / chuot phai vao pill) thi BOOST FPS + dong ho FPS VAN CON chay,
---    dieu khien bang 2 nut [x] [R] canh dong ho (xem KEEP_PERF_ON_CLOSE o duoi).
---    Ctrl sau khi tat hub chi con la phim trang, khong the lam dong Roblox.
--- 10. TAB KHONG CON BI GIOI HAN: them bao nhieu section cung hien het.
---    Sidebar cua WindUI von la ScrollingFrame nhung AN thanh cuon -> tab thu 10
---    tro di tu dong bi day xuong duoi, nhin tuong la mat. Hub giu do tong chieu
---    cao danh sach tab va PHONG TO cua so vua du hien het (toi da ~86% man hinh);
---    qua nhieu tab thi tu bat thanh cuon mau hong de keo xuong.
---    Them 20-30 tab muon tim nhanh thi doi HIEN_O_TIM_KIEM duoi day = true.
---==============================================================
-
--- ==================== PHIM TAT MO/TAT MENU (sua o day) ====================
--- Mac dinh: Left Ctrl (bam 1 cai la mo/thu menu ngay, ko phai giu roi tha).
--- An toan voi Ctrl+C / Ctrl+V / Ctrl+X: neu luc giu Ctrl ma co bam them
--- phim hoac chuot khac thi no tu hoan lai dung trang thai cu.
--- Them bo phat khac vao danh sach neu thich, vi du:
---   Enum.KeyCode.RightControl, Enum.KeyCode.RightShift, Enum.KeyCode.Insert, Enum.KeyCode.FFive
 local MENU_TOGGLE_KEYS = {
     Enum.KeyCode.LeftControl,
 }
@@ -151,7 +87,7 @@ end
 
 -- ==================== KIEM TRA EXECUTOR CO CHAY DUOC HUB KHONG ====================
 -- Nhieu executor loc loadstring/load/gethui -> hub im lang khong len duoc.
-if type(loadstring) ~= "function" and type(load) ~= "function" then
+if type(loadstring) ~= "function" and type(loads) ~= "function" then
     notify("Hub Lỗi", "Executor này chặn loadstring -> ko chạy hub được. Đổi executor khác (hoặc bật chế độ Luau exploit).", 12)
     return
 end
@@ -569,6 +505,15 @@ local buildOk, buildErr = xpcall(function()
     --==============================================================
     local sections = {
         {
+            title = "Scrip hỗ trợ ",
+            icon = "Settings",
+            buttons = {
+                {"ZaZa Hub", "https://raw.githubusercontent.com/Berkcan61/ZaZa-Hub/refs/heads/main/ZaZa.lua"},
+                {"H4XDARLINGFLYV367", "https://scriptblox.com/raw/Universal-Script-Universal-Fly-Gui-V3-15837"},
+                {"", ""},
+            },
+        },
+        {    
             title = "Blox Fruit",
             icon = "swords",
             buttons = {
@@ -579,7 +524,7 @@ local buildOk, buildErr = xpcall(function()
                 {"Hermanos Hub (PVP)", "https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"},
                 {"HoHo Hub (Freemium)", "https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"},
                 {"OMG Hub", "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},
-                {"Banana Premium", "không free đâu các bóe mua đi rẻ mờ 100k chứ mấy "}
+                {"Banana để test crack ko có free đâu", "d"},
             },
         },
         {
