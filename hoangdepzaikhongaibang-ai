@@ -579,7 +579,7 @@ local buildOk, buildErr = xpcall(function()
                 {"Hermanos Hub (PVP)", "https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"},
                 {"HoHo Hub (Freemium)", "https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"},
                 {"OMG Hub", "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},
-                {"bnn test ko use dc ", ""}
+                {"Banana Premium", "không free đâu các bóe mua đi rẻ mờ 100k chứ mấy "}
             },
         },
         {
