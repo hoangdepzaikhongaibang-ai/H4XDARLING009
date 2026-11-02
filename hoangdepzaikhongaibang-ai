@@ -510,7 +510,7 @@ local buildOk, buildErr = xpcall(function()
             buttons = {
                 {"ZaZa Hub", "https://raw.githubusercontent.com/Berkcan61/ZaZa-Hub/refs/heads/main/ZaZa.lua"},
                 {"H4XDARLINGFLYV367", "https://scriptblox.com/raw/Universal-Script-Universal-Fly-Gui-V3-15837"},
-                {"", ""},
+                {"wait update", ""},
             },
         },
         {    
