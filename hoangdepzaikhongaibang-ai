@@ -87,7 +87,7 @@ end
 
 -- ==================== KIEM TRA EXECUTOR CO CHAY DUOC HUB KHONG ====================
 -- Nhieu executor loc loadstring/load/gethui -> hub im lang khong len duoc.
-if type(loadstring) ~= "function" and type(loads) ~= "function" then
+if type(loadstring) ~= "function" and type(load) ~= "function" then
     notify("Hub Lỗi", "Executor này chặn loadstring -> ko chạy hub được. Đổi executor khác (hoặc bật chế độ Luau exploit).", 12)
     return
 end
@@ -506,11 +506,12 @@ local buildOk, buildErr = xpcall(function()
     local sections = {
         {
             title = "Scrip hỗ trợ ",
-            icon = "Settings",
+            icon = "crosshair",
             buttons = {
                 {"ZaZa Hub", "https://raw.githubusercontent.com/Berkcan61/ZaZa-Hub/refs/heads/main/ZaZa.lua"},
-                {"H4XDARLINGFLYV367", "https://scriptblox.com/raw/Universal-Script-Universal-Fly-Gui-V3-15837"},
-                {"wait update", ""},
+                {"H4XDARLINGFLYV367", "https://raw.githubusercontent.com/hoangdepzaikhongaibang-ai/H4XDARLING009-/refs/heads/main/H4XDARLINGFLYV367"},
+                {"Aim Bot", "https://raw.githubusercontent.com/Drax2k10/Codelinhtinh/refs/heads/main/aimbot.lua"},
+                {"wait for update", "hếheshehaejdww"}
             },
         },
         {    
@@ -524,7 +525,7 @@ local buildOk, buildErr = xpcall(function()
                 {"Hermanos Hub (PVP)", "https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"},
                 {"HoHo Hub (Freemium)", "https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"},
                 {"OMG Hub", "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"},
-                {"Banana để test crack ko có free đâu", "d"},
+                {"Banana để test crack ko có free đâu", ""},
             },
         },
         {
