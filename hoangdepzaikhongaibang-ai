@@ -508,7 +508,7 @@ local buildOk, buildErr = xpcall(function()
             title = "Scrip hỗ trợ ",
             icon = "crosshair",
             buttons = {
-                {"ZaZa Hub", "https://raw.githubusercontent.com/Berkcan61/ZaZa-Hub/refs/heads/main/ZaZa.lua"},
+                {"H4XDAARLING Hub", "https://raw.githubusercontent.com/hoangdepzaikhongaibang-ai/scriphotrovuive/refs/heads/main/Tab%20%235.luau"},
                 {"H4XDARLINGFLYV367", "https://raw.githubusercontent.com/hoangdepzaikhongaibang-ai/H4XDARLING009-/refs/heads/main/H4XDARLINGFLYV367"},
                 {"Aim Bot", "https://raw.githubusercontent.com/Drax2k10/Codelinhtinh/refs/heads/main/aimbot.lua"},
                 {"wait for update", "hếheshehaejdww"}
