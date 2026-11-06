@@ -1,19 +1,8 @@
+
 local MENU_TOGGLE_KEYS = {
     Enum.KeyCode.LeftControl,
 }
-
--- ==================== TAT HUB THI BOOST FPS / FPS CO CHAY TIEP? ====================
--- true  = an X tat hub thi menu bien mat het, NHUNG do hoa da boost van con
---         nguyen + dong ho FPS van con hien goc phai duoi man hinh.
---         (Ngay canh dong ho FPS co 2 nut nho: [x] = tat dong ho (van giu boost),
---          [R] = Restore, tra lai cai dat goc cua game -> ko can mo hub nua.)
--- false = tat hub la sach will (tra lai do hoa + an FPS) nhu cu.
 local KEEP_PERF_ON_CLOSE = true
-
--- ==================== NHIEU TAB THI CO O TIM KIEM? ====================
--- Sidebar tab KHONG bi gioi han nua (hub tu phong to cua so + bat thanh cuon).
--- De true = hien them o TIM KIEM o dau sidebar -> up 20-30 tab van tim script nhanh.
--- De false = giao dien giong het nhu cu (khong co o tim).
 local HIEN_O_TIM_KIEM = false
 
 -- ==================== XÓA MENU CŨ (chống đúp khi chạy lại) ====================
@@ -511,7 +500,8 @@ local buildOk, buildErr = xpcall(function()
                 {"H4XDARLING Hub", "https://raw.githubusercontent.com/hoangdepzaikhongaibang-ai/scriphotrovuive/refs/heads/main/Tab%20%235.luau"},
                 {"H4XDARLINGFLYV367", "https://raw.githubusercontent.com/hoangdepzaikhongaibang-ai/H4XDARLING009-/refs/heads/main/H4XDARLINGFLYV367"},
                 {"Aim Bot", "https://raw.githubusercontent.com/Drax2k10/Codelinhtinh/refs/heads/main/aimbot.lua"},
-                {"wait for update", "hếheshehaejdww"}
+                {"wait for update", "a"},
+
             },
         },
         {    
