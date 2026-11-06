@@ -74,8 +74,6 @@ local function notify(title, text, dur)
     end)
 end
 
--- ==================== KIEM TRA EXECUTOR CO CHAY DUOC HUB KHONG ====================
--- Nhieu executor loc loadstring/load/gethui -> hub im lang khong len duoc.
 if type(loadstring) ~= "function" and type(load) ~= "function" then
     notify("Hub Lỗi", "Executor này chặn loadstring -> ko chạy hub được. Đổi executor khác (hoặc bật chế độ Luau exploit).", 12)
     return
@@ -85,9 +83,7 @@ end
 local RUNCHUNK = (type(loadstring) == "function") and loadstring or loads
 
 -- ==================== TẢI WINDUI ====================
--- 3 link nguồn, cai nao tai duoc thi dung cai do (mang VN hay bi chan link
--- github releases -> co raw + jsdelivr lam duong phong). Loi cu the se hien
--- len man hinh de guoi cho t xem.
+
 local WINDUI_SOURCES = {
     "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua",
     "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
